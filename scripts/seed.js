@@ -1,8 +1,23 @@
 const { PrismaClient } = require("@prisma/client")
 const bcrypt = require("bcryptjs")
-const { generateCodes } = require("../lib/codes")
+const crypto = require("crypto")
 
 const prisma = new PrismaClient()
+
+function generateCode() {
+  const bytes = crypto.randomBytes(9)
+  const raw = Buffer.from(bytes).toString("base64url").toUpperCase().replace(/[^A-Z0-9]/g, "")
+  const segments = raw.slice(0, 12).match(/.{4}/g) || []
+  return `DKLND-${segments.join("-")}`
+}
+
+function generateCodes(count) {
+  const codes = new Set()
+  while (codes.size < count) {
+    codes.add(generateCode())
+  }
+  return Array.from(codes)
+}
 
 async function main() {
   console.log("Seeding database...")
@@ -24,6 +39,7 @@ async function main() {
     data: codes.map((code) => ({ code, bookId: "hunting-misfortune" })),
   })
   console.log(`Created ${codes.length} test codes`)
+  console.log("First code:", codes[0])
 
   await prisma.contentItem.upsert({
     where: { slug: "the-children-of-the-ash-tree" },
@@ -32,7 +48,7 @@ async function main() {
       slug: "the-children-of-the-ash-tree",
       title: "The Children of the Ash Tree",
       contentType: "lore",
-      body: "# The Children of the Ash Tree\n\n## Origins\n\nDeep in the heart of the Whisperwood...",
+      body: "# The Children of the Ash Tree\n\n## Origins\n\nDeep in the heart of the Whisperwood, where the old magic still stirs beneath the roots, there stands an ash tree older than the kingdoms of men. Its bark is silver-grey, its leaves shimmer like spilled moonlight, and its roots reach deeper than the foundations of the world.",
       excerpt: "The ancient origins of the mysterious Children of the Ash Tree.",
       accessLevel: "book_code_member",
       published: true,
