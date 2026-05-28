@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Darkland Saga &mdash; Emberlight Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,300;1,8..60,400;1,8..60,500&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"><style>
+/*
+  DARKLAND SAGA — EMBERLIGHT ARCHIVE (v3)
+  Layered Entry Architecture — Base Stylesheet
+
+  DESIGN PRINCIPLES:
+  - Chosen immersion: every chamber offers doors deeper AND a way back
+  - Differentiated emotional chambers: each section has its own pacing, density, register
+  - Preserved mystery: gaps, fragments, attributed sources, "unconfirmed" margins
+  - Varied pacing: silence interludes, breathers, dense passages, narrow meditations
+  - Asset modularity: CSS textures and abstract forms serve as placeholders;
+    replace any slot with <img> for commissioned artwork; page holds weight
+    through typography, rhythm, and negative space alone
+*/
+
+:root {
+  --du: #1a1410; --de: #c4883c; --ds: #8a8278; --dl: #f0e6d3;
+  --dh: #2d231c; --di: #6b6b67; --bg: var(--du); --bw: #2a251f;
+  --bp: var(--dh); --ba: #241f19; --bm: #1f1b16; --tx: var(--dl);
+  --tm: var(--ds); --th: #f5ede0; --ac: var(--de); --ad: #a07030;
+  --br: rgba(138,130,120,0.18); --bl: rgba(138,130,120,0.08);
+  --gr: #2d3a2e; --cp: #9e6b4a; --gd: #a6904a; --dg: #5a544b;
+  --ru: #6b2e26; --fg: #1e1d1a;
+  --fd: 'EB Garamond','Georgia','Times New Roman',serif;
+  --fb: 'Source Serif 4','Georgia','Charter','Iowan Old Style',serif;
+  --fu: 'Inter',-apple-system,'Segoe UI','Helvetica Neue',sans-serif;
+  --mw: 40rem; --mW: 60rem; --hh: 4rem; --s: 1.2s; --m: 0.8s; --f: 0.4s;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;background:var(--bg)}
+body{background:var(--bg);color:var(--tx);font-family:var(--fb);font-size:1rem;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:1px solid var(--ac);outline-offset:3px}
+::selection{background:rgba(196,136,60,0.3);color:var(--th)}
+.g{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9000;opacity:0.035;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");background-repeat:repeat;background-size:256px 256px}
+.h{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--hh);display:flex;align-items:center;justify-content:space-between;padding:0 1.25rem;background:linear-gradient(180deg,rgba(26,20,16,0.92) 0%,rgba(26,20,16,0) 100%)}
+@media(min-width:48em){.h{padding:0 8%}}
+.hl{font-family:var(--fd);font-size:1rem;font-weight:500;letter-spacing:0.08em;color:var(--th);text-transform:uppercase;opacity:0.85}
+.hn{display:flex;gap:2rem;list-style:none}
+@media(max-width:47.99em){.hn{display:none}}
+.hn a{font-family:var(--fu);font-size:0.75rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:var(--tm);transition:color var(--f)}
+.hn a:hover{color:var(--ac)}
+.p0{position:fixed;top:0;left:0;width:100%;height:100vh;z-index:500;background:var(--fg);display:flex;align-items:center;justify-content:center;pointer-events:none;animation:pf 2s forwards;animation-delay:0.3s}
+.p0l{width:3rem;height:1px;background:var(--tm);opacity:0.12}
+@keyframes pf{0%{opacity:1}60%{opacity:1}100%{opacity:0}}
+.ci{position:relative;z-index:2;max-width:var(--mW);margin:0 auto;padding:0 1.25rem}
+@media(min-width:48em){.ci{padding:0 8%}}
+.cn{max-width:var(--mw);margin:0 auto}
+.sd{position:relative;width:100%;z-index:5;pointer-events:none}
+.sdw{height:18vh;min-height:8rem;background:linear-gradient(180deg,var(--bg) 0%,rgba(42,37,31,0.35) 35%,var(--bw) 100%)}
+.sdb{height:18vh;min-height:8rem;background:linear-gradient(180deg,var(--bw) 0%,rgba(36,31,25,0.5) 50%,var(--ba) 100%)}
+.sdc{height:18vh;min-height:8rem;background:linear-gradient(180deg,var(--ba) 0%,rgba(40,34,27,0.4) 50%,var(--bm) 100%)}
+.sdd{height:18vh;min-height:8rem;background:linear-gradient(180deg,var(--bm) 0%,rgba(36,30,24,0.3) 50%,var(--bg) 100%)}
+.ll{font-family:var(--fu);font-size:0.65rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--ad);opacity:0.65;margin-bottom:1.25rem}
+.br{height:1px;opacity:0;pointer-events:none;grid-column:1/-1;margin:1rem 0}
+@media(min-width:40em){.br{margin:2rem 0}}
+.still{grid-column:1/-1;text-align:center;padding:3rem 2rem;max-width:32rem;margin:0 auto}
+.still blockquote{font-family:var(--fd);font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;color:var(--tm);line-height:1.5;border:none;padding:0}
+.still cite{display:block;margin-top:0.75rem;font-family:var(--fu);font-size:0.65rem;font-style:normal;text-transform:uppercase;letter-spacing:0.08em;opacity:0.4}
+.still-hr{width:2rem;height:1px;background:var(--br);margin:0 auto 1.5rem}
+.shc{text-align:center;margin-bottom:3rem}
+.shh{font-family:var(--fd);font-size:clamp(1.3rem,2vw,1.6rem);font-weight:500;color:var(--th);margin-bottom:0.75rem}
+.shd{font-size:clamp(0.85rem,1vw,0.95rem);line-height:1.6;color:var(--tm);max-width:55ch}
+.shdc{margin:0 auto;text-align:center}
+.dir{display:inline-block;font-family:var(--fu);font-size:0.7rem;font-weight:400;letter-spacing:0.06em;color:var(--ac);opacity:0.7;transition:opacity var(--f)}
+.dir:hover{opacity:1}
+.dir:after{content:' \\2192'}
+.ael{width:3rem;height:1px;background:var(--br);margin:2rem 0}
+.gp{display:inline;color:var(--ds);opacity:0.3;font-family:var(--fu);font-size:0.75rem;letter-spacing:0.3em}
+.gp::before{content:'[ '}
+.gp::after{content:' ]'}
+.ch{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem}
+.ch-item{flex:1;min-width:12rem;padding:1.25rem;border:1px solid var(--br);border-radius:2px;transition:border-color var(--m),background var(--m);cursor:pointer}
+.ch-item:hover{border-color:rgba(196,136,60,0.25);background:rgba(45,35,28,0.15)}
+.ch-label{font-family:var(--fu);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ad);opacity:0.65;margin-bottom:0.4rem}
+.ch-name{font-family:var(--fd);font-size:1rem;font-weight:500;color:var(--th);margin-bottom:0.3rem}
+.ch-desc{font-size:0.8rem;line-height:1.5;color:var(--tm)}
+/* ============ CHAMBER 1: THRESHOLD ============ */
+.c1{position:relative;width:100%;height:100vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
+.c1sk{position:absolute;top:0;left:0;width:100%;height:70%;background:linear-gradient(180deg,rgba(30,24,19,.95)0%,rgba(40,32,25,.6)30%,rgba(55,42,32,.35)55%,rgba(45,38,30,.5)78%,rgba(35,30,25,.8)100%);opacity:.8}
+.c1gl{position:absolute;bottom:28%;left:50%;transform:translateX(-50%);width:40%;height:35%;background:radial-gradient(ellipse 100%120%at 50%100%,rgba(196,136,60,.07)0%,rgba(196,136,60,.02)30%,transparent 60%);animation:hp 10s ease-in-out infinite}
+@keyframes hp{0%,100%{opacity:.5}50%{opacity:1}}
+.c1p{position:absolute;bottom:28%;left:50%;transform:translateX(-50%);width:6%;height:55%;background:linear-gradient(180deg,transparent 0%,rgba(196,136,60,.04)30%,rgba(196,136,60,.07)55%,rgba(196,136,60,.02)80%,transparent 100%);pointer-events:none}
+.c1p::before{content:'';position:absolute;top:30%;left:50%;transform:translateX(-50%);width:80%;height:40%;background:linear-gradient(180deg,rgba(196,136,60,.03)0%,rgba(255,220,160,.015)50%,transparent 100%);filter:blur(4px)}
+.c1p::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:120%;height:8%;background:radial-gradient(ellipse 50%100%at 50%100%,rgba(196,136,60,.06)0%,transparent 100%);border-radius:50%}
+.c1si{position:absolute;bottom:28%;left:50%;transform:translateX(-50%);width:1.5%;height:6%;background:rgba(20,16,12,.65);border-radius:40%40%0 0;pointer-events:none;z-index:4}
+.c1si::after{content:'';position:absolute;top:-15%;left:50%;transform:translateX(-50%);width:80%;height:30%;background:rgba(20,16,12,.5);border-radius:50%50%0 0}
+.c1gr{position:absolute;bottom:0;left:0;width:100%;height:30%;z-index:3}
+.c1g1{position:absolute;bottom:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,transparent 0%,rgba(42,35,28,.15)15%,rgba(35,28,22,.3)45%,rgba(26,20,16,.7)100%)}
+.c1g2{position:absolute;bottom:0;left:0;width:100%;height:100%;opacity:.06;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(138,130,120,.15)3px,rgba(138,130,120,.15)4px),repeating-linear-gradient(90deg,transparent,transparent 20px,rgba(138,130,120,.05)20px,rgba(138,130,120,.05)21px)}
+.c1r1{position:absolute;bottom:0;left:6%;width:3%;height:18%;background:linear-gradient(180deg,transparent 0%,rgba(45,35,28,.12)25%,rgba(45,35,28,.2)60%,rgba(45,35,28,.3)100%);clip-path:polygon(20%0,80%0,100%100%,0 100%);z-index:4}
+.c1r1::after{content:'';position:absolute;bottom:20%;left:10%;width:80%;height:1px;background:rgba(196,136,60,.06)}
+.c1r2{position:absolute;bottom:0;right:8%;width:4%;height:14%;background:linear-gradient(180deg,transparent 0%,rgba(45,35,28,.1)30%,rgba(45,35,28,.2)70%,rgba(45,35,28,.3)100%);clip-path:polygon(10%0,90%0,100%100%,0 100%);z-index:4}
+.c1v{position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;background:radial-gradient(ellipse 90%70%at 50%40%,transparent 25%,rgba(26,20,16,.25)55%,rgba(26,20,16,.6)100%);pointer-events:none}
+.c1c{position:relative;z-index:10;padding:0 1.25rem 10vh;width:100%;animation:cf 1.2s forwards;animation-delay:1.3s;opacity:0}
+@media(min-width:48em){.c1c{padding:0 8% 8vh}}
+@keyframes cf{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.c1o{font-family:var(--fu);font-size:0.65rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--tm);opacity:0.6;margin-bottom:1rem}
+.c1t{font-family:var(--fd);font-size:clamp(2rem,5vw,3.75rem);font-weight:500;line-height:1.1;letter-spacing:0.04em;color:var(--th);max-width:16ch;margin-bottom:0.75rem}
+.c1st{font-family:var(--fb);font-size:clamp(0.9rem,1.5vw,1.15rem);font-weight:300;font-style:italic;line-height:1.5;color:var(--tm);max-width:38ch}
+.c1a{width:4rem;height:1px;background:var(--ac);margin:1.5rem 0 0.75rem;opacity:0.4}
+.c1ch{display:flex;gap:1rem;margin-top:2rem;opacity:0;animation:cf 1s forwards;animation-delay:2.5s}
+.c1ch-item{padding:0.75rem 1.5rem;border:1px solid var(--br);border-radius:2px;cursor:pointer;transition:all var(--m)}
+.c1ch-item:hover{border-color:rgba(196,136,60
+font-size:clamp(0.85rem,1vw,0.95rem);line-height:1.6;color:var(--tm);margin-bottom:2rem}
+
+/* C5: THE WORLD cards */
+.c5g{display:grid;grid-template-columns:1fr;gap:2rem}
+@media(min-width:40em){.c5g{grid-template-columns:1fr 1fr;gap:2.5rem}}
+.c5c{padding:1.5rem;border:1px solid var(--br);border-radius:2px;transition:border-color var(--m)}
+.c5c:hover{border-color:rgba(196,136,60,0.2)}
+.c5c:nth-child(3){grid-column:1/-1}
+.c5m{aspect-ratio:16/9;max-height:160px;background:var(--bp);border:1px solid var(--br);border-radius:1px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;overflow:hidden}
+.c5m span{font-family:var(--fu);font-size:0.5rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--tm);opacity:0.3;text-align:center;position:relative;z-index:2;padding:0 0.5rem}
+.c5m-geo{background:linear-gradient(135deg,var(--bp)0%,#2a221c 100%)}
+.c5m-cul{background:repeating-linear-gradient(0deg,transparent,transparent 8px,rgba(138,130,120,0.03)8px,rgba(138,130,120,0.03)9px),linear-gradient(135deg,var(--bp),#201b16)}
+.c5m-mag{background:radial-gradient(circle at 50% 50%,#2a302a 0%,var(--bp) 100%)}
+.c5tt{font-family:var(--fu);font-size:0.55rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ad);opacity:0.5;margin-bottom:0.35rem}
+.c5h{font-family:var(--fd);font-size:1rem;font-weight:500;color:var(--th);margin-bottom:0.75rem}
+.c5bx{font-size:0.85rem;line-height:1.6;color:var(--tm)}
+.c5bx p+p{margin-top:0.6rem}
+.c5bx strong{color:var(--th);font-weight:500}
+
+/* C6: STORYTELLER */
+.c6{position:relative;background:var(--bg);padding:5rem 0 6rem}
+.c6::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(138,130,120,0.01)60px,rgba(138,130,120,0.01)61px);pointer-events:none}
+.c6bx{font-size:clamp(0.9rem,1.1vw,1rem);line-height:1.7;color:var(--tm);max-width:65ch}
+.c6bx p+p{margin-top:1.2rem}
+.c6q{font-family:var(--fd);font-size:clamp(1rem,1.3vw,1.15rem);font-style:italic;color:var(--tm);margin:2rem 0;max-width:45ch;line-height:1.5}
+.c6div{width:3rem;height:1px;background:var(--br);margin:2rem 0}
+.c6grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:3rem}
+@media(min-width:40em){.c6grid{grid-template-columns:1fr 1fr 1fr;gap:2rem}}
+.c6card{padding:1.5rem;border:1px solid var(--br);border-radius:2px;transition:border-color var(--m),background var(--m);cursor:pointer}
+.c6card:hover{border-color:rgba(196,136,60,0.2);background:rgba(45,35,28,0.08)}
+.c6card-l{font-family:var(--fu);font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ad);opacity:0.55;margin-bottom:0.5rem}
+.c6card-t{font-family:var(--fd);font-size:1rem;font-weight:500;color:var(--th);margin-bottom:0.5rem}
+.c6card p{font-size:0.85rem;line-height:1.55;color:var(--tm);margin-bottom:1rem}
+
+/* C7: CODA */
+.c7{position:relative;background:var(--bg);padding:6rem 0 4rem}
+.c7hr{width:3rem;height:1px;background:var(--br);margin:0 auto 2rem}
+.c7q{font-family:var(--fd);font-size:clamp(1.2rem,2vw,1.6rem);font-style:italic;color:var(--tm);line-height:1.5;max-width:28rem;margin:0 auto;text-align:center}
+.c7cite{display:block;margin-top:1rem;font-family:var(--fu);font-size:0.6rem;font-style:normal;text-transform:uppercase;letter-spacing:0.1em;opacity:0.3;text-align:center}
+.c7fade{width:100%;height:1px;background:linear-gradient(90deg,transparent 0%,var(--br) 50%,transparent 100%);margin:3rem auto;max-width:12rem}
+.c7door{text-align:center;margin:3rem 0}
+.c7door-l{font-family:var(--fd);font-size:clamp(1rem,1.3vw,1.15rem);font-weight:500;color:var(--th);margin-bottom:0.5rem}
+.c7door-p{font-size:0.9rem;line-height:1.5;color:var(--tm);max-width:32rem;margin:0 auto 1.5rem}
+.c7colophon{text-align:center;padding-top:3rem;border-top:1px solid var(--br);margin-top:4rem}
+.c7colophon p{font-size:0.7rem;color:var(--ds);opacity:0.4;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="g"></div>
+<header class="h" role="banner">
+  <div class="hl">Darkland Saga</div>
+  <nav class="hn" role="navigation" aria-label="Main navigation">
+    <a href="#c2">Threshold</a>
+    <a href="#c3">Saga</a>
+    <a href="#c4">Archive</a>
+    <a href="#c5">World</a>
+    <a href="#c6">Storyteller</a>
+  </nav>
+</header>
+<div class="p0"><div class="p0l"></div></div>
+
+<!-- ===== CHAMBER 1: THRESHOLD ===== -->
+<section class="c1" id="c1">
+  <div class="c1sk"></div><div class="c1gl"></div>
+  <div class="c1p"></div><div class="c1si"></div>
+  <div class="c1gr"><div class="c1g1"></div><div class="c1g2"></div></div>
+  <div class="c1r1"></div><div class="c1r2"></div><div class="c1v"></div>
+  <div class="c1c">
+    <div class="c1o">Emberlight Archive</div>
+    <h1 class="c1t">The Darkland Saga</h1>
+    <div class="c1a"></div>
+    <p class="c1st">What holds when the darkness presses in.</p>
+    <div class="c1ch">
+      <div class="c1ch-item" onclick="document.getElementById('c2').scrollIntoView({behavior:'smooth'})">
+        <div class="c1ch-label">Enter</div>
+        <div class="c1ch-name">The Threshold</div>
+      </div>
+      <div class="c1ch-item" onclick="document.getElementById('c3').scrollIntoView({behavior:'smooth'})">
+        <div class="c1ch-label">Read</div>
+        <div class="c1ch-name">The Saga</div>
+      </div>
+    </div>
+  </div>
+  <div class="c1w"><div class="c1wl"></div><div class="c1wt">Descend</div></div>
+</section>
+<div class="sd sdw"></div>
+
+<!-- ===== CHAMBER 2: GROUNDING ===== -->
+<section class="c2" id="c2">
+  <div class="ci cn">
+    <div class="ll">The Threshold</div>
+    <h2 class="c2t">Welcome to the Archive</h2>
+    <div class="c2b">
+      <p>This is a place where stories are kept &mdash; not sold, not marketed, but held. The Darkland Saga is a world of endurance, of light that flickers and stays lit, of people who hold thresholds they did not choose.</p>
+      <p>You may enter through any door. What you find depends on what you seek.</p>
+    </div>
+    <div class="ael"></div>
+    <p class="c2q">&ldquo;There is more here than I can fully see yet.&rdquo;</p>
+    <cite class="c2cite">&mdash; Marginal note, found in a copy of &ldquo;The Elements and the Soul&rdquo;</cite>
+    <div class="ch">
+      <div class="ch-item" onclick="document.getElementById('c3').scrollIntoView({behavior:'smooth'})">
+        <div class="ch-label">Begin with the stories</div>
+        <div class="ch-name">Read the Saga</div>
+        <div class="ch-desc">Books, blurbs, and excerpts. The heart of the world lives in its tales.</div>
+      </div>
+      <div class="ch-item" onclick="document.getElementById('c4').scrollIntoView({behavior:'smooth'})">
+        <div class="ch-label">Discover fragments</div>
+        <div class="ch-name">Enter the Archive</div>
+        <div class="ch-desc">Field notes, lore fragments, and recovered records &mdash; immersive and incomplete.</div>
+      </div>
+      <div class="ch-item" onclick="document.getElementById('c5').scrollIntoView({behavior:'smooth'})">
+        <div class="ch-label">Explore the world</div>
+        <div class="ch-name">The World</div>
+        <div class="ch-desc">Maps, cultures, magic &mdash; worldbuilding presented with restraint.</div>
+      </div>
+      <div class="ch-item" onclick="document.getElementById('c6').scrollIntoView({behavior:'smooth'})">
+        <div class="ch-label">Meet the keeper</div>
+        <div class="ch-name">Storyteller</div>
+        <div class="ch-desc">The author&#8217;s presence, themes, and reflections on the saga.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sd sdb"></div>
+
+<!-- ===== CHAMBER 3: READ THE SAGA ===== -->
+<section class="c3" id="c3">
+  <div class="ci">
+    <div class="shc">
+      <div class="ll">Read the Saga</div>
+      <h2 class="shh">The Darkland books</h2>
+      <p class="shd shdc">The Darkland Saga is not fundamentally a story about darkness. It is about what endures when darkness presses in. Light that persists. People who hold.</p>
+    </div>
+    <div class="c3bk">
+      <div class="c3bc">
+        <div class="c3cv"><span>Book I</span></div>
+        <div class="c3bi">
+          <div class="c3bo">Book One</div>
+          <div class="c3bt">Darkness Kindled</div>
+          <div class="c3bl">On the border of the known world, beyond the Pillar&#8217;s protective shroud, survival itself is a fool&#8217;s hope&#8212;and a conspiracy darker than anyone imagined.</div>
+          <div class="c3ex">
+            <div class="c3ex-t">A taste</div>
+            <p class="c3ex-p">The wind carried ash and the memory of fire as Kaelen crested the ridge. Below, Eventide lay as it had for a hundred years: clustered, guarded, flickering with lantern-light at dusk. The border wall was a dark seam against the fading sky. Beyond it, the Bane waited.</p>
+          </div>
+          <a class="dir" href="#">Explore the book</a>
+        </div>
+      </div>
+      <div class="c3bc">
+        <div class="c3cv"><span>Prequel</span></div>
+        <div class="c3bi">
+          <div class="c3bo">Book Zero</div>
+          <div class="c3bt">Hunting Misfortune</div>
+          <div class="c3bl">Five years before the darkness kindled, a banehunter&#8217;s hunt collides with betrayal, a hellcat, and a conspiracy that reaches into the cult of the Blackstones.</div>
+          <div class="c3ex">
+            <div class="c3ex-t">A taste</div>
+            <p class="c3ex-p">The hellcat regarded him with ember eyes. Rowan kept the blade between them. &#8220;I am not your prey,&#8221; he said. The cat&#8217;s plates settled, flames guttering. They traveled together by unspoken accord.</p>
+          </div>
+          <a class="dir" href="#">Explore the book</a>
+        </div>
+      </div>
+    </div>
+    <div class="c3ro">
+      <div class="c3ro-l">Reading order</div>
+      <p class="c3ro-p">The saga may be entered at either point. <em>Hunting Misfortune</em> provides context; <em>Darkness Kindled</em> is the beginning of the main cycle. Readers who prefer chronological order begin with the prequel. Those who prefer to discover the world alongside its characters begin with Book One. Either door opens to the same world.</p>
+    </div>
+  </div>
+</section>
+<div class="sd sdb"></div>
+
+<!-- ===== CHAMBER 4: ENTER THE ARCHIVE ===== -->
+<section class="c4" id="c4">
+  <div class="ci">
+    <div class="shc">
+      <div class="ll">Enter the Archive</div>
+      <h2 class="shh">Discovered fragments</h2>
+      <p class="shd shdc">Field notes, archival records, and lore fragments recovered from a living civilization. What follows is incomplete, attributed where possible, and partly obscured by time and distance.</p>
+    </div>
+    <div class="c4a">
+      <!-- Entry 1: Pillar of Light (featured full-width) -->
+      <div class="c4x c4xf" data-t="environment">
+        <div class="c4m c4m-env"><span>Threshold landscape</span></div>
+        <div class="c4tx">
+          <div class="c4tt">Environmental record &middot; Codex Arsatir</div>
+          <div class="c4hx c4hl">The Pillar of Light</div>
+          <div class="c4bx">
+            <p>Just beyond the southern mountains of Ciallmhar, the Pillar stretches toward the sky <span class="gp">height unknown</span> &mdash; the only thing keeping the Storm and the Bane from finding a permanent home in Arsatir. Clouds swirl around the mile-wide beacon.</p>
+            <p>No one fully understands the ancient magic that keeps it lit. Every year a ritual involving all four nations recharges its light. For those on the borders, the hours feel like days while the ritual is completed.</p>
+            <blockquote>When the Pillar&#8217;s light shines again, bane that have slipped across the border slink into the long shadows its light casts, hungering for their chance to turn creatures of light to darkness.<cite>&mdash; Anonymous border keeper, Ciallmhar Garrison</cite></blockquote>
+          </div>
+          <div class="c4mg">Recorded in the seventh year of the Renewal</div>
+          <div class="c4src">Source: Garrison log, partially damaged</div>
+          <a class="dir" href="#">View in full archive</a>
+        </div>
+      </div>
+      <!-- Entry 2: The Storm and the Bane -->
+      <div class="c4x" data-t="document">
+        <div class="c4m c4m-doc"><span>Archivist&#8217;s note</span></div>
+        <div class="c4tx">
+          <div class="c4tt">Archival document &middot; Field observation</div>
+          <div class="c4hx">The Storm and the Bane</div>
+          <div class="c4bx">
+            <p>The Storm is a dominating force of darkness over Eadrom. Clouds of pure black form its vanguard, its wall stretching as far as the eye can see <span class="gp">beyond surveyed territory</span> &mdash; bunching against the border of Arsatir, demanding entry.</p>
+            <p><em>Bane</em> are ill-made creatures sent beyond the borders under cover of the Storm. Most are wild animals corrupted by other bane. Infected humans die of the corruption if not treated quickly. Bane cannot survive long in the light.</p>
+          </div>
+          <div class="c4mg">Collated from border patrol reports</div>
+          <div class="c4src">Multiple sources, compiled by Archivist N.</div>
+          <a class="dir" href="#">Continue reading</a>
+        </div>
+      </div>
+      <!-- Entry 3: Hellcat -->
+      <div class="c4x" data-t="diagram">
+        <div class="c4m c4m-dia"><span>Anatomical study</span></div>
+        <div class="c4tx">
+          <div class="c4tt">Bestiary &middot; Natural study</div>
+          <div class="c4hx">Hellcat</div>
+          <div class="c4bx">
+            <p>A large, broad-shouldered black cat whose body is covered in small hard coin-sized interlocking plates. When not stalking prey, it raises these plates to let the flames beneath rage. Its pupil glows like a living ember.</p>
+            <p>Hellcats are highly intelligent and resistant to bane corruption. A mixture of fire and darkness, they hunt and feed on bane &mdash; the inferno within burns away corruption.</p>
+            <p>Due to their solitary nature, forming a bond is <span class="gp">no recorded instances</span>.</p>
+          </div>
+          <div class="c4mg">Unverified field notes</div>
+          <div class="c4src">Recovered from a banehunter&#8217;s journal</div>
+          <a class="dir" href="#">View study</a>
+        </div>
+      </div>
+      <!-- Pause: silence interlude -->
+      <div class="br"></div>
+      <div class="still">
+        <div class="still-hr"></div>
+        <blockquote>The old records speak of the Renewal as if it were a ceremony. Those who have stood the border know better. It is a holding of breath. A waiting. A prayer that the weave holds one more year.</blockquote>
+        <cite>&mdash; Marginal note, found in a weathered copy of &ldquo;The Elements and the Soul&rdquo;</cite>
+      </div>
+      <div class="br"></div>
+      <!-- Entry 4: Four Nations -->
+      <div class="c4x" data-t="map">
+        <div class="c4m c4m-dia"><span>Territorial survey</span></div>
+        <div class="c4tx">
+          <div class="c4tt">Geographic record &middot; Fragment</div>
+          <div class="c4hx">The Four Nations of Arsatir</div>
+          <div class="c4bx">
+            <p><strong>Ciallmhar</strong> &mdash; Northeast. The Smouldering Forest, rivers of lava beneath trees that crack with heat. Tall stature. The Crown grants nobility to banehunters.</p>
+            <p><strong>Oroa</strong> &mdash; Northwest. The Fallen Mountains. The tallest people, longer lives, muscular builds.</p>
+            <p><strong>Proteya</strong> &mdash; West. Coastal. At the center of a maelstrom <span class="gp">location disputed</span> lies dry land where waterstones can be mined.</p>
+            <p><strong>The Wildwood</strong> &mdash; East to Southeast. Great forest. Griffon riders and forest drakes.</p>
+          </div>
+          <div class="c4mg">Boundary markers approximate</div>
+          <div class="c4src">Surveyor&#8217;s Log #7, partially damaged</div>
+          <a class="dir" href="#">View full map</a>
+        </div>
+      </div>
+      <!-- Entry 5: Bonding of Essence -->
+      <div class="c4x" data-t="record">
+        <div class="c4m c4m-doc"><span>Scholarly record</span></div>
+        <div class="c4tx">
+          <div class="c4tt">Scholarly record &middot; Academy of Ciallmhar</div>
+          <div class="c4hx">On the Bonding of Essence</div>
+          <div class="c4bx">
+            <p><em>Extracted from a damaged treatise.</em></p>
+            <p>Essence stones are found at locations of extreme elemental intensity. Bonding is the key. There are <span class="gp">at least two</span> known ways: passive contact over time, and <span class="gp">illegible</span>. Some speak of a third method <span class="gp">possibly apocryphal</span>.</p>
+            <blockquote>Each element demands a different mindset. Earth requires a desire to make whole. Wind demands openness. Fire demands precision and discipline. Water requires trust.<cite>&mdash; From &ldquo;The Elements and the Soul,&rdquo; page 14</cite></blockquote>
+          </div>
+          <div class="c4mg">Author unknown &middot; Pages missing</div>
+          <div class="c4src">Recovered from a Ciallmhar waystation library</div>
+          <a class="dir" href="#">Read treatise</a>
+        </div>
+      </div>
+    </div>
+    <div class="c4ft">
+      <p class="c4ftt">&ldquo;There is more here than I can fully see yet.&rdquo;<cite class="c4ftc">&mdash; Marginal note</cite></p>
+      <a class="dir" href="#">Enter the full archive</a>
+    </div>
+  </div>
+</section>
+<div class="sd sdc"></div>
+
+<!-- ===== CHAMBER 5: THE WORLD ===== -->
+<section class="c5" id="c5">
+  <div class="ci cn">
+    <div class="ll">The World</div>
+    <h2 class="shh">Arsatir and beyond</h2>
+    <p class="c5intro">What follows is not a compendium. It is an evocation &mdash; sketches of a world drawn from the stories told within it. More exists than is recorded here. That is by design.</p>
+    <div class="ael"></div>
+  </div>
+  <div class="ci">
+    <div<div class="c5g">
+      <!-- Geography -->
+      <div class="c5c">
+        <div class="c5m c5m-geo"><span>Territorial sketch</span></div>
+        <div class="c5tx">
+          <div class="c5tt">Geography</div>
+          <h3 class="c5h">The Four Nations</h3>
+          <div class="c5bx">
+            <p><strong>Ciallmhar</strong> &mdash; Northeast. The Smouldering Forest, where rivers of lava run beneath trees that crack with heat. The Crown grants nobility to banehunters who distinguish themselves.</p>
+            <p><strong>Oroa</strong> &mdash; Northwest. The Fallen Mountains. The tallest people of Arsatir, with longer lives and muscular builds.</p>
+            <p><strong>Proteya</strong> &mdash; West. Coastal nation. At the center of a maelstrom <span class="gp">location disputed</span> lies dry land where waterstones can be mined.</p>
+            <p><strong>The Wildwood</strong> &mdash; East to Southeast. Great forest spanning from mid-continent to the southern tip. Home to griffon riders and forest drakes.</p>
+          </div>
+          <a class="dir" href="#">View the map</a>
+        </div>
+      </div>
+      <!-- Culture -->
+      <div class="c5c">
+        <div class="c5m c5m-cul"><span>Cultural survey</span></div>
+        <div class="c5tx">
+          <div class="c5tt">Peoples</div>
+          <h3 class="c5h">The banehunters</h3>
+          <div class="c5bx">
+            <p>In Ciallmhar, the Crown incentivizes the hunting of bane through the granting of nobility and lands to houses that impress in the banehunter guild&rsquo;s rankings. Despite this, the banehunter nobility is not viewed as true nobility by the historical houses.</p>
+            <p>A banehunter&rsquo;s life is solitary by necessity. The work demands it. Bonds form slowly, but they form deeply&mdash;between hunters, between a hunter and a town that becomes home, between a hunter and a hellcat that chooses to walk beside them.</p>
+          </div>
+          <a class="dir" href="#">Read cultural notes</a>
+        </div>
+      </div>
+      <!-- Magic -->
+      <div class="c5c">
+        <div class="c5m c5m-mag"><span>Arcane study</span></div>
+        <div class="c5tx">
+          <div class="c5tt">Magic</div>
+          <h3 class="c5h">Essence and weaving</h3>
+          <div class="c5bx">
+            <p>Essence stones are found at locations of extreme elemental intensity&mdash;deep earth, coastal maelstroms, volcanic vents, high wind passes. Bonding with a stone is not a transaction; it is a relationship.</p>
+            <p><em>Earth</em> demands a desire to make whole. <em>Wind</em> demands openness and release. <em>Fire</em> demands precision and discipline. <em>Water</em> requires trust.</p>
+            <p>Those who master multiple elements are rare. Using more than one in combat is said to be exceptionally difficult, though <span class="gp">no living practitioner verified</span>.</p>
+            <p>There is a fifth tradition, spoken of only in fragments: <span class="gp">darkstones</span>.</p>
+          </div>
+          <a class="dir" href="#">Study the elements</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sd sdc"></div>
+
+<!-- ===== CHAMBER 6: STORYTELLER ===== -->
+<section class="c6" id="c6">
+  <div class="ci cn">
+    <div class="ll">Storyteller</div>
+    <h2 class="shh">From the keeper&rsquo;s hand</h2>
+    <div class="ael"></div>
+    <div class="c6bx">
+      <p>The Darkland Saga was not built from outlines and worldbuilding documents. It was discovered&mdash;unearthed slowly, over years of writing, in the spaces between scenes, in the questions characters asked that their author could not yet answer.</p>
+      <p>This world began with a single image: a pillar of light at dusk, a border wall, and someone standing at the edge of the known, choosing to step forward rather than back.</p>
+      <p>The themes that emerged&mdash;endurance, stewardship, light that persists not because it dazzles but because it holds&mdash;were not planned. They were found, embedded in the story like fossils waiting to be uncovered.</p>
+    </div>
+    <div class="c6div"></div>
+    <p class="c6q">To write a world is not to control it. It is to learn humility before something larger than yourself. The Darkland Saga taught me that.</p>
+    <div class="c6div"></div>
+    <div class="c6grid">
+      <div class="c6card">
+        <div class="c6card-l">On themes</div>
+        <h3 class="c6card-t">Light that holds</h3>
+        <p>The saga is not about heroic triumph over darkness. It is about ordinary faithfulness standing against overwhelming odds. The courage of people who are not special&mdash;except in their refusal to abandon each other.</p>
+        <a class="dir" href="#">Read the essay</a>
+      </div>
+      <div class="c6card">
+        <div class="c6card-l">On craft</div>
+        <h3 class="c6card-t">Writing the threshold</h3>
+        <p>Every scene in the Darkland Saga is a threshold. Someone is about to cross into unknown territory&mdash;geographic, emotional, spiritual. The craft question is always: what do they carry with them, and what must they leave behind?</p>
+        <a class="dir" href="#">Read the essay</a>
+      </div>
+      <div class="c6card">
+        <div class="c6card-l">On inspiration</div>
+        <h3 class="c6card-t">What lights the ember</h3>
+        <p>The landscapes of the Darkland Saga are drawn from real places: the Scottish Highlands at dusk, the Pacific Northwest in winter, the English moors under heavy cloud. But the soul of the world was shaped by older things&mdash;myth, faith, and the question of what makes people endure what they cannot escape.</p>
+        <a class="dir" href="#">Read the essay</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sd sdd"></div>
+
+<!-- ===== CHAMBER 7: CODA ===== -->
+<section class="c7">
+  <div class="ci cn">
+    <div class="c7hr"></div>
+    <p class="c7q">Darkness is not the absence of light. It is what remains when light chooses to hold its ground.</p>
+    <cite class="c7cite">&mdash; Old Arsatir saying, origin unknown</cite>
+    <div class="c7fade"></div>
+    <div class="c7door">
+      <div class="c7door-l">The world is here.</div>
+      <p class="c7door-p">You may enter through any door. The stories will meet you where you are.</p>
+      <a class="dir" href="#">Begin reading Darkness Kindled</a>
+    </div>
+    <div class="c7colophon">
+      <p>The Darkland Saga &mdash; Emberlight Archive</p>
+      <p>Stories from the dark, for those walking toward the dawn.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
