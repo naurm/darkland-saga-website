@@ -12,10 +12,11 @@ export async function middleware(req: NextRequest) {
   }
 
   // Check JWT token from the session cookie — edge-safe, no Prisma
+  // secureCookie must match the environment: true for HTTPS (Vercel production)
   const token = await getToken({
     req,
     secret: process.env.AUTH_SECRET,
-    secureCookie: false,
+    secureCookie: process.env.NODE_ENV === "production",
   })
 
   // All other /companion/* pages require authentication
