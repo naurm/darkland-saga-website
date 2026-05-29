@@ -2,11 +2,9 @@
 
 import { signIn } from "next-auth/react"
 import { useState } from "react"
-import { useRouter } from "next/navigation"
 import Link from "next/link"
 
 export default function SignInPage() {
-  const router = useRouter()
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
 
@@ -21,25 +19,26 @@ export default function SignInPage() {
       email: formData.get("email") as string,
       password: formData.get("password") as string,
       redirect: false,
-      callbackUrl: "/companion",
     })
 
     if (result?.error) {
       setError("Invalid email or password. Please try again.")
       setLoading(false)
-    } else if (result?.url) {
-      router.push(result.url)
+    } else if (result?.ok) {
+      // Success — use window.location for a full page redirect
+      window.location.href = "/companion"
+    } else {
+      setLoading(false)
+      setError("Something went wrong. Try again.")
     }
   }
 
   return (
     <section className="mx-auto max-w-md px-6 pt-24 pb-12">
-      {/* Decorative header */}
       <div className="mb-10 text-center">
         <div className="companion-section-rule mb-6">
           <span className="companion-section-ornament">✦</span>
         </div>
-
         <div className="mb-4">
           <svg className="mx-auto h-8 w-6 text-ember-400" viewBox="0 0 32 48" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
             <path d="M16 4v3"/><path d="M10 7h12"/>
@@ -49,7 +48,6 @@ export default function SignInPage() {
             <circle cx="20" cy="14" r="1.5" fill="currentColor"/>
           </svg>
         </div>
-
         <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember-500 mb-2">
           The Companion Archive
         </p>
@@ -57,7 +55,6 @@ export default function SignInPage() {
         <p className="mt-2 text-sm text-parchment-500 max-w-sm mx-auto">
           Enter your credentials to access the archive
         </p>
-
         <div className="companion-section-rule companion-section-rule--flip mt-6">
           <span className="companion-section-ornament">✦</span>
         </div>
@@ -65,10 +62,7 @@ export default function SignInPage() {
 
       <div className="companion-plaque p-6 md:p-8 max-w-sm mx-auto">
         <div className="companion-plaque-inner p-6">
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-5"
-          >
+          <form onSubmit={handleSubmit} className="space-y-5">
             {error && (
               <div className="rounded border border-red-700 bg-red-950/30 px-4 py-3 text-sm text-red-400">
                 {error}
@@ -76,30 +70,17 @@ export default function SignInPage() {
             )}
             <div>
               <label htmlFor="email" className="block text-sm text-parchment-400 mb-1.5 font-mono text-xs uppercase tracking-wider">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
+              <input id="email" name="email" type="email" required
                 className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none"
-                placeholder="you@example.com"
-              />
+                placeholder="you@example.com" />
             </div>
             <div>
               <label htmlFor="password" className="block text-sm text-parchment-400 mb-1.5 font-mono text-xs uppercase tracking-wider">Password</label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                required
-                className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none"
-              />
+              <input id="password" name="password" type="password" required
+                className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none" />
             </div>
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full rounded border border-ember-600 bg-ember-700/20 px-5 py-2.5 font-mono text-sm text-ember-300 hover:bg-ember-700/40 hover:text-emberglow-bright transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+            <button type="submit" disabled={loading}
+              className="w-full rounded border border-ember-600 bg-ember-700/20 px-5 py-2.5 font-mono text-sm text-ember-300 hover:bg-ember-700/40 hover:text-emberglow-bright transition-all disabled:opacity-50">
               {loading ? "Signing in..." : "Sign In"}
             </button>
           </form>
