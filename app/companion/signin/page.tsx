@@ -1,7 +1,37 @@
-import { signIn } from "@/lib/auth"
+"use client"
+
+import { signIn } from "next-auth/react"
+import { useState } from "react"
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 
 export default function SignInPage() {
+  const router = useRouter()
+  const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+    setError(null)
+
+    const formData = new FormData(e.currentTarget)
+    
+    const result = await signIn("credentials", {
+      email: formData.get("email") as string,
+      password: formData.get("password") as string,
+      redirect: false,
+      callbackUrl: "/companion",
+    })
+
+    if (result?.error) {
+      setError("Invalid email or password. Please try again.")
+      setLoading(false)
+    } else if (result?.url) {
+      router.push(result.url)
+    }
+  }
+
   return (
     <section className="mx-auto max-w-md px-6 pt-24 pb-12">
       {/* Decorative header */}
@@ -36,16 +66,14 @@ export default function SignInPage() {
       <div className="companion-plaque p-6 md:p-8 max-w-sm mx-auto">
         <div className="companion-plaque-inner p-6">
           <form
-            action={async (formData) => {
-              "use server"
-              await signIn("credentials", {
-                email: formData.get("email"),
-                password: formData.get("password"),
-                redirectTo: "/companion",
-              })
-            }}
+            onSubmit={handleSubmit}
             className="space-y-5"
           >
+            {error && (
+              <div className="rounded border border-red-700 bg-red-950/30 px-4 py-3 text-sm text-red-400">
+                {error}
+              </div>
+            )}
             <div>
               <label htmlFor="email" className="block text-sm text-parchment-400 mb-1.5 font-mono text-xs uppercase tracking-wider">Email</label>
               <input
@@ -69,9 +97,10 @@ export default function SignInPage() {
             </div>
             <button
               type="submit"
-              className="w-full rounded border border-ember-600 bg-ember-700/20 px-5 py-2.5 font-mono text-sm text-ember-300 hover:bg-ember-700/40 hover:text-emberglow-bright transition-all"
+              disabled={loading}
+              className="w-full rounded border border-ember-600 bg-ember-700/20 px-5 py-2.5 font-mono text-sm text-ember-300 hover:bg-ember-700/40 hover:text-emberglow-bright transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Sign In
+              {loading ? "Signing in..." : "Sign In"}
             </button>
           </form>
         </div>
