@@ -14,22 +14,21 @@ export default function SignInPage() {
     setError(null)
 
     const formData = new FormData(e.currentTarget)
-    
-    const result = await signIn("credentials", {
-      email: formData.get("email") as string,
-      password: formData.get("password") as string,
-      redirect: false,
-    })
+    const email = formData.get("email") as string
+    const password = formData.get("password") as string
 
-    if (result?.error) {
-      setError("Invalid email or password. Please try again.")
-      setLoading(false)
-    } else if (result?.ok) {
-      // Success — use window.location for a full page redirect
+    try {
+      // Try the full redirect approach — let next-auth handle navigation
+      await signIn("credentials", {
+        email,
+        password,
+        callbackUrl: "/companion",
+      })
+      // If we get here, redirect didn't happen — handle it
       window.location.href = "/companion"
-    } else {
+    } catch (err) {
       setLoading(false)
-      setError("Something went wrong. Try again.")
+      setError("Invalid email or password. Please try again.")
     }
   }
 
