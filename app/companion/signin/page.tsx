@@ -86,12 +86,19 @@ export default function SignInPage() {
         </div>
       </div>
 
-      <p className="mt-6 text-center text-sm text-parchment-500">
-        Don&apos;t have an account?{" "}
-        <Link href="/companion/redeem" className="text-ember-400 hover:text-emberglow-bright">
-          Redeem a book code
-        </Link>
-      </p>
+      <div className="mt-6 space-y-2 text-center text-sm text-parchment-500">
+        <p>
+          Don&apos;t have an account?{" "}
+          <Link href="/companion/redeem" className="text-ember-400 hover:text-emberglow-bright">
+            Redeem a book code
+          </Link>
+        </p>
+        <p>
+          <Link href="/companion/signin/forgot" className="text-ember-500 hover:text-ember-300">
+            Forgot password?
+          </Link>
+        </p>
+      </div>
     </section>
   )
 }
