@@ -7,6 +7,14 @@ export default function AboutPage() {
         </p>
         <h1 className="font-display text-3xl sm:text-4xl text-ember-200 mb-8">About J.L. Allred</h1>
 
+        <div className="mb-8 flex justify-center">
+          <img
+            src="/images/author-headshot.jpg"
+            alt="J.L. Allred"
+            className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-2 border-ember-dim shadow-lg"
+          />
+        </div>
+
         <div className="space-y-5 text-sm sm:text-base text-parchment-400 leading-relaxed">
           <p>
             J.L. Allred writes fantasy that lives in the space between hope and despair —
