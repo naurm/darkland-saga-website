@@ -91,7 +91,7 @@ export default function SettingsPage() {
               <label htmlFor="currentPassword" className="block text-sm text-parchment-400 mb-1.5 font-mono text-xs uppercase tracking-wider">
                 Current Password
               </label>
-              <input id="currentPassword" type="password" required
+              <input id="currentPassword" type="password" required autoComplete="current-password"
                 value={currentPassword}
                 onChange={(e) => setCurrentPassword(e.target.value)}
                 className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none" />
@@ -101,7 +101,7 @@ export default function SettingsPage() {
               <label htmlFor="newPassword" className="block text-sm text-parchment-400 mb-1.5 font-mono text-xs uppercase tracking-wider">
                 New Password
               </label>
-              <input id="newPassword" type="password" required minLength={6}
+              <input id="newPassword" type="password" required minLength={6} autoComplete="new-password"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none" />
@@ -111,7 +111,7 @@ export default function SettingsPage() {
               <label htmlFor="confirmPassword" className="block text-sm text-parchment-400 mb-1.5 font-mono text-xs uppercase tracking-wider">
                 Confirm New Password
               </label>
-              <input id="confirmPassword" type="password" required minLength={6}
+              <input id="confirmPassword" type="password" required minLength={6} autoComplete="new-password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none" />

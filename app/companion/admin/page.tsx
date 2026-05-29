@@ -243,7 +243,7 @@ function ContentEditor() {
   return (
     <div className="rounded-lg border border-ember-dim bg-parchment-900/50 p-6">
       <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm text-parchment-400 mb-1">Slug</label>
             <input value={slug} onChange={(e) => setSlug(e.target.value)} className="w-full rounded border border-ember-dim bg-parchment-900 px-3 py-2 text-sm text-parchment-200" placeholder="the-children-of-the-ash-tree" />
@@ -253,7 +253,7 @@ function ContentEditor() {
             <input value={title} onChange={(e) => setTitle(e.target.value)} className="w-full rounded border border-ember-dim bg-parchment-900 px-3 py-2 text-sm text-parchment-200" placeholder="The Children of the Ash Tree" />
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm text-parchment-400 mb-1">Type</label>
             <select value={contentType} onChange={(e) => setContentType(e.target.value)} className="w-full rounded border border-ember-dim bg-parchment-900 px-3 py-2 text-sm text-parchment-200">

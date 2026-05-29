@@ -69,13 +69,13 @@ export default function SignInPage() {
             )}
             <div>
               <label htmlFor="email" className="block text-sm text-parchment-400 mb-1.5 font-mono text-xs uppercase tracking-wider">Email</label>
-              <input id="email" name="email" type="email" required
+              <input id="email" name="email" type="email" required autoComplete="email"
                 className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none"
                 placeholder="you@example.com" />
             </div>
             <div>
               <label htmlFor="password" className="block text-sm text-parchment-400 mb-1.5 font-mono text-xs uppercase tracking-wider">Password</label>
-              <input id="password" name="password" type="password" required
+              <input id="password" name="password" type="password" required autoComplete="current-password"
                 className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none" />
             </div>
             <button type="submit" disabled={loading}

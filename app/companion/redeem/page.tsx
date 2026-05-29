@@ -110,7 +110,10 @@ export default function RedeemPage() {
                 value={code}
                 onChange={(e) => setCode(e.target.value.toUpperCase())}
                 placeholder="DKLND-XXXX-XXXX-XXXX"
-                className="w-full rounded border border-ember-dim/60 bg-parchment-900/80 px-5 py-3 text-sm font-mono tracking-[0.15em] text-ember-300 placeholder-parchment-700 focus:border-ember-500 focus:outline-none focus:shadow-[0_0_12px_rgba(184,148,79,0.08)] transition-all text-center"
+                autoComplete="off"
+                inputMode="text"
+                autoCapitalize="characters"
+                className="w-full rounded border border-ember-dim/60 bg-parchment-900/80 px-5 py-3 text-sm font-mono tracking-[0.15em] text-ember-300 placeholder-parchment-700 focus:border-ember-500 focus:outline-none focus:shadow-[0_0_12px_rgba(184,148,79,0.08)] transition-all text-center text-ellipsis overflow-hidden whitespace-nowrap"
                 required
               />
             </div>
@@ -126,6 +129,7 @@ export default function RedeemPage() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="email"
                     placeholder="you@example.com"
                     className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none"
                     required
@@ -141,6 +145,7 @@ export default function RedeemPage() {
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="new-password"
                     placeholder="Choose a password"
                     className="w-full rounded border border-ember-dim bg-parchment-900/70 px-4 py-2.5 text-sm text-parchment-200 placeholder-parchment-600 focus:border-ember-500 focus:outline-none"
                     required

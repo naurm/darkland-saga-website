@@ -293,6 +293,8 @@
   font-size: 0.9375rem;
   line-height: 1.85;
   color: #c8b898;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .companion-prose h1,
 .companion-prose h2,
@@ -381,6 +383,12 @@
   padding: 0.15em 0.4em;
   border-radius: 3px;
   color: #d4b778;
+  word-break: break-word;
+}
+
+.companion-prose pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
 }
 .companion-prose a {
   color: #b8944f;

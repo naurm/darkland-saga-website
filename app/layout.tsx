@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Inter, DM_Serif_Display, JetBrains_Mono } from "next/font/google"
 import { SITE } from "@/lib/constants"
+import MobileNav from "@/components/MobileNav"
+import BackToTop from "@/components/BackToTop"
 import "./globals.css"
 
 const inter = Inter({
@@ -41,7 +43,7 @@ export default function RootLayout({
         className={`${inter.variable} ${dmSerifDisplay.variable} ${jetbrainsMono.variable} font-sans bg-parchment-950 text-parchment-300 antialiased selection:bg-emberglow/25 selection:text-ember-200`}
       >
         <header className="fixed top-0 left-0 right-0 z-50 border-b border-ember-dim bg-parchment-950/80 backdrop-blur-sm">
-          <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+          <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 md:px-6 py-2 md:py-4">
             <a href="/" className="font-display text-lg text-ember-300 hover:text-emberglow-bright transition-colors shrink-0">
               J.L. Allred
             </a>
@@ -54,31 +56,16 @@ export default function RootLayout({
               <a href="/companion" className="hover:text-ember-300 transition-colors">Companion</a>
               <a href="/support" className="hover:text-ember-300 transition-colors">Support</a>
             </div>
-            {/* Mobile hamburger */}
-            <details className="md:hidden relative">
-              <summary className="list-none flex items-center justify-center w-10 h-10 rounded border border-ember-dim cursor-pointer hover:bg-ember-900/30 transition-colors">
-                <svg className="w-5 h-5 text-ember-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-              </summary>
-              <div className="absolute right-0 top-12 w-48 rounded border border-ember-dim bg-parchment-950 shadow-xl backdrop-blur-sm">
-                <div className="flex flex-col gap-1 p-3 text-sm font-mono text-parchment-400">
-                  <a href="/" className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Home</a>
-                  <a href="/books" className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Books</a>
-                  <a href="/why-fantasy" className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Why Fantasy</a>
-                  <a href="/world-of-eadrom" className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">The World</a>
-                  <a href="/about" className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">About</a>
-                  <a href="/companion" className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Companion</a>
-                  <a href="/support" className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Support</a>
-                </div>
-              </div>
-            </details>
+            {/* Mobile nav */}
+            <MobileNav />
           </nav>
         </header>
 
-        <main className="min-h-screen pt-16">
+        <main className="min-h-screen pt-14 md:pt-16">
           {children}
         </main>
+
+        <BackToTop />
 
         <footer className="mx-auto max-w-5xl border-t border-ember-dim px-6 py-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-parchment-500">
