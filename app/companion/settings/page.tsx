@@ -30,25 +30,25 @@ export default function SettingsPage() {
     }
 
     try {
-      const res = await fetch("/api/me/password", {
+      const res = await fetch("/api/me", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ currentPassword, newPassword }),
       })
 
-      const data = await res.json()
-
-      if (res.ok) {
-        setStatus("success")
-        setMessage("Password changed successfully.")
-        setCurrentPassword("")
-        setNewPassword("")
-        setConfirmPassword("")
-        setTimeout(() => router.refresh(), 1500)
-      } else {
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({ error: "Request failed" }))
         setStatus("error")
-        setMessage(data.error || "Something went wrong.")
+        setMessage(data.error || `Error ${res.status}`)
+        return
       }
+
+      setStatus("success")
+      setMessage("Password changed successfully.")
+      setCurrentPassword("")
+      setNewPassword("")
+      setConfirmPassword("")
+      setTimeout(() => router.refresh(), 1500)
     } catch {
       setStatus("error")
       setMessage("Network error. Please try again.")
