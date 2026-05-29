@@ -78,8 +78,12 @@ export default async function CompanionDashboard() {
         </div>
       </div>
 
-      {/* Sign out */}
-      <div className="text-right mb-8">
+      {/* Sign out / Settings */}
+      <div className="flex justify-end items-center gap-4 mb-8">
+        <Link href="/companion/settings" className="text-sm text-parchment-500 hover:text-parchment-300 transition-colors font-mono">
+          Settings
+        </Link>
+        <span className="text-parchment-700">·</span>
         <form
           action={async () => {
             "use server"
