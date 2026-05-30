@@ -168,7 +168,7 @@ export default function HomePage() {
             <path d="M20 8v-1" opacity="0.4" />
             <path d="M24 11l1-1" opacity="0.3" />
           </svg>
-          <RotatingQuote quotes={homepageQuotes} />
+          <RotatingQuote quotes={homepageQuotes} intervalMs={30000} />
           <p className="mt-6 font-mono text-[11px] text-parchment-600">
             click to advance
           </p>

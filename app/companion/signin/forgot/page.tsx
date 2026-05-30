@@ -32,13 +32,13 @@ export default function ForgotPasswordPage() {
           </p>
           <p className="text-sm text-parchment-400 mb-6">
             Send an email to{" "}
-            <a href="mailto:jlallred.author@gmail.com" className="text-ember-400 hover:text-emberglow-bright">
-              jlallred.author@gmail.com
+            <a href="mailto:author@jlallred.com" className="text-ember-400 hover:text-emberglow-bright">
+              author@jlallred.com
             </a>{" "}
             with the email address associated with your account and we&apos;ll get you a new password.
           </p>
           <a
-            href="mailto:jlallred.author@gmail.com?subject=Companion%20Password%20Reset&body=I%20need%20a%20password%20reset%20for%20my%20Companion%20account.%20My%20email%20is%3A%20"
+            href="mailto:author@jlallred.com?subject=Companion%20Password%20Reset&body=I%20need%20a%20password%20reset%20for%20my%20Companion%20account.%20My%20email%20is%3A%20"
             className="inline-flex items-center gap-2 rounded border border-ember-600 bg-ember-700/20 px-5 py-2.5 font-mono text-sm text-ember-300 hover:bg-ember-700/40 transition-all"
           >
             Send Email

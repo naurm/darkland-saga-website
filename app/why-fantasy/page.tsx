@@ -122,7 +122,7 @@ export default function WhyFantasyPage() {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-6">
             Voices on Writing &amp; Story
           </p>
-          <RotatingQuote quotes={authorQuotes} intervalMs={10000} />
+          <RotatingQuote quotes={authorQuotes} intervalMs={30000} />
           <p className="mt-6 font-mono text-[11px] text-parchment-600">
             click to advance
           </p>
