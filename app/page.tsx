@@ -89,16 +89,18 @@ export default function HomePage() {
             </div>
           </div>
           {/* Cover art */}
-          <div className="rounded-lg overflow-hidden border border-ember-dim/30 max-w-sm mx-auto">
-            <img
-              src="/images/hunting-misfortune-cover.jpg"
-              alt="Hunting Misfortune cover art — a lone figure on a precipice facing a beam of light through the storm"
-              className="w-full h-auto"
-            />
+          <div className="flex flex-col items-center">
+            <div className="rounded-lg overflow-hidden border border-ember-dim/30 max-w-sm mx-auto">
+              <img
+                src="/images/hunting-misfortune-cover.jpg"
+                alt="Hunting Misfortune cover art — a lone figure on a precipice facing a beam of light through the storm"
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="mt-2 text-[11px] font-mono text-parchment-600 text-center">
+              Illustration by Jeremiah Carrig
+            </p>
           </div>
-          <p className="mt-2 text-[11px] font-mono text-parchment-600 text-center max-w-sm mx-auto">
-            Illustration by Jeremiah Carrig
-          </p>
         </div>
       </section>
 
