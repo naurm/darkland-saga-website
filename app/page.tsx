@@ -1,5 +1,37 @@
 import Link from "next/link"
-import { SITE, BOOKS, LINKS } from "@/lib/constants"
+import { BOOKS, LINKS } from "@/lib/constants"
+import RotatingQuote, { type Quote } from "@/components/RotatingQuote"
+
+const homepageQuotes: Quote[] = [
+  {
+    text: "Death incarnate, called 'bane', came with The Storm, and everything they touched turned to Darkness.",
+    source: "The Darkland Saga",
+  },
+  {
+    text: "Stories from the dark, for those struggling toward the dawn.",
+    source: "J.L. Allred",
+  },
+  {
+    text: "Protect the Pillar. Stop the Storm. Curse the Darkness.",
+    source: "Darkness Kindled, Book One of the Darkland Saga",
+  },
+  {
+    text: "Beyond Light's reach, monsters known as bane claim the shadows.",
+    source: "Hunting Misfortune, A Darkland Saga Novel",
+  },
+  {
+    text: "What holds when the darkness presses in.",
+    source: "Emberlight Archive",
+  },
+  {
+    text: "When the Pillar's light shines again, bane that have slipped across the border slink into the long shadows its light casts.",
+    source: "Anonymous border keeper, Ciallmhar Garrison",
+  },
+  {
+    text: "There is more here than I can fully see yet.",
+    source: "Emberlight Archive",
+  },
+]
 
 export default function HomePage() {
   return (
@@ -63,6 +95,9 @@ export default function HomePage() {
               alt="Hunting Misfortune cover art — a lone figure on a precipice facing a beam of light through the storm"
               className="w-full h-auto"
             />
+            <p className="mt-2 text-[11px] font-mono text-parchment-600 text-center">
+              Illustration by Jeremiah Carrig
+            </p>
           </div>
         </div>
       </section>
@@ -108,7 +143,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tagline quote */}
+      {/* Rotating quote */}
       <section className="mx-auto max-w-3xl px-6 py-20 text-center">
         <div className="border-t border-ember-dim pt-12">
           <svg
@@ -121,27 +156,19 @@ export default function HomePage() {
             strokeLinejoin="round"
             aria-hidden="true"
           >
-            {/* Hanging loop */}
             <path d="M16 4v3" />
             <path d="M10 7h12" />
-            {/* Lantern body trapezoid */}
             <path d="M8 10l3 18h18l3-18z" />
-            {/* Horizontal divider */}
             <line x1="12" y1="18" x2="28" y2="18" />
-            {/* Base */}
             <path d="M12 28l-2 4h20l-2-4" />
-            {/* Ember glow inside */}
             <circle cx="20" cy="14" r="1.5" fill="currentColor" opacity="0.8" />
             <circle cx="16" cy="22" r="1" fill="currentColor" opacity="0.6" />
-            {/* Radiant lines from inner ember */}
             <path d="M20 8v-1" opacity="0.4" />
             <path d="M24 11l1-1" opacity="0.3" />
           </svg>
-          <blockquote className="font-display text-xl sm:text-2xl text-ember-300 leading-relaxed text-balance">
-            &ldquo;Death incarnate, called &lsquo;bane&rsquo;, came with The Storm, and everything they touched turned to Darkness.&rdquo;
-          </blockquote>
-          <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-parchment-500">
-            — The Darkland Saga
+          <RotatingQuote quotes={homepageQuotes} />
+          <p className="mt-6 font-mono text-[11px] text-parchment-600">
+            click to advance
           </p>
         </div>
       </section>
