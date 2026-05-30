@@ -21,7 +21,7 @@ const homepageQuotes: Quote[] = [
   },
   {
     text: "What holds when the darkness presses in.",
-    source: "Emberlight Archive",
+    source: "Tower of Archives",
   },
   {
     text: "When the Pillar's light shines again, bane that have slipped across the border slink into the long shadows its light casts.",
@@ -29,7 +29,7 @@ const homepageQuotes: Quote[] = [
   },
   {
     text: "There is more here than I can fully see yet.",
-    source: "Emberlight Archive",
+    source: "Tower of Archives",
   },
 ]
 

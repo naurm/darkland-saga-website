@@ -5,7 +5,7 @@ export default function WorldOfEadromPage() {
     <>
       {/* Chamber 1: Threshold */}
       <section className="mx-auto max-w-4xl px-6 pt-32 pb-20 text-center">
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember-500 mb-4">Emberlight Archive</p>
+        <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember-500 mb-4">Tower of Archives</p>
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-ember-200 leading-tight text-balance">
           The World of Eadrom
         </h1>
@@ -163,7 +163,7 @@ export default function WorldOfEadromPage() {
             </Link>
           </div>
           <div className="mt-8">
-            <p className="font-mono text-xs text-parchment-600 leading-relaxed">The Darkland Saga &middot; Emberlight Archive &middot; Colophon</p>
+            <p className="font-mono text-xs text-parchment-600 leading-relaxed">The Darkland Saga &middot; Tower of Archives &middot; Colophon</p>
           </div>
         </div>
       </section>
