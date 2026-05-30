@@ -2,7 +2,7 @@ export const SITE = {
   name: "J.L. Allred",
   tagline: "Stories from the dark, for those struggling toward the dawn.",
   description:
-    "Author of the Darkland Saga — epic tales of living darkness, impossible choices, and light that pushes back.",
+    "Author of the Darkland Saga — nobledark fantasy about living darkness, impossible choices, and light that pushes back.",
   url: "https://jlallred.com",
 }
 

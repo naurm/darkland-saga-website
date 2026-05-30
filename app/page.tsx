@@ -19,6 +19,9 @@ export default function HomePage() {
             <p className="mt-3 text-sm sm:text-base text-parchment-300 leading-relaxed">
               Epic tales of living darkness, impossible choices, and light that pushes back.
             </p>
+            <span className="inline-block mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-ember-600 border border-ember-dim/50 rounded-full px-3 py-1">
+              Nobledark Fantasy
+            </span>
             <div className="mt-6 flex flex-col items-start gap-3">
               <Link
                 href="/books"

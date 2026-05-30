@@ -15,6 +15,9 @@ export default function BooksPage() {
       <section className="mx-auto max-w-4xl px-6 pb-12">
         <div className="rounded border border-ember-dim bg-parchment-900/30 p-6">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-2">Reading Order</p>
+          <p className="text-sm text-parchment-300 italic leading-relaxed mb-4">
+            The Darkland Saga is nobledark fantasy: a world where darkness is real and pressing, but the people who fight it have the power to make a difference. Their choices matter, even when the odds are overwhelming.
+          </p>
           <p className="text-sm text-parchment-400 leading-relaxed">
             Darkness Kindled is the entry point to the Darkland Saga — the main series begins here.
             Hunting Misfortune is a prequel set five years earlier, following a different protagonist.
