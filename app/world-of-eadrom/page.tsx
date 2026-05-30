@@ -3,14 +3,14 @@ import Link from "next/link"
 const floors = [
   { level: 1, name: "The Threshold", desc: "Public entry, exhibits, reception, and orientation. Where every visitor begins." },
   { level: 2, name: "The Keepers", desc: "Copyists, cataloging rooms, and preservation vaults. Those who keep the archive functioning." },
-  { level: 3, name: "Military History", desc: "Campaigns, wars, battle maps, commanders, royal records, fortress designs." },
-  { level: 4, name: "Kingdoms & Peoples", desc: "History, genealogy, diplomacy, cultures, languages — the study of mankind itself." },
+  { level: 3, name: "Military History", desc: "Campaigns, wars, battle maps, commanders, royal records, fortress designs.", href: "#the-pillar" },
+  { level: 4, name: "Kingdoms & Peoples", desc: "History, genealogy, diplomacy, cultures, languages — the study of mankind itself.", href: "#four-nations" },
   { level: 5, name: "Natural Philosophy", desc: "Geography, weather, flora, fauna, agriculture, astronomy, navigation." },
-  { level: 6, name: "Arts & Craftsmanship", desc: "Architecture, engineering, metallurgy, music, poetry, essence-stone technology." },
-  { level: 7, name: "Mysteries", desc: "The Bane, the Storm, Darkness, Light, Essence, Bonding, Weaving, ancient artifacts — the most restricted of the ordinary floors." },
+  { level: 6, name: "Arts & Craftsmanship", desc: "Architecture, engineering, metallurgy, music, poetry, essence-stone technology.", href: "#essence-magic" },
+  { level: 7, name: "Mysteries", desc: "The Bane, the Storm, Darkness, Light, Essence, Bonding, Weaving, ancient artifacts — the most restricted of the ordinary floors.", href: "#storm-bane" },
   { level: 8, name: "Philosophy & Theology", desc: "Questions of meaning. Virtue, ethics, the purpose of Light, interpretations of ancient texts." },
   { level: 9, name: "The Chamber of Inquiry", desc: "Active research, private collections, visiting scholars. Knowledge still being pursued." },
-  { level: 10, name: "The Archmaster's Hall", desc: "The pinnacle. Council chambers, rarest manuscripts, observatories. What is kept here, the lower floors do not record." },
+  { level: 10, name: "The Archmaster's Hall", desc: "The pinnacle. Council chambers, rarest manuscripts, observatories. What is kept here, the lower floors do not record.", href: "#archmasters-hall" },
 ]
 
 export default function WorldOfEadromPage() {
@@ -61,7 +61,13 @@ export default function WorldOfEadromPage() {
                   {String(floor.level).padStart(2, "0")}
                 </span>
                 <div>
-                  <p className="font-mono text-sm text-ember-400">{floor.name}</p>
+                  {floor.href ? (
+                    <a href={floor.href} className="font-mono text-sm text-ember-400 hover:text-emberglow-bright transition-colors">
+                      {floor.name} <span className="text-ember-600 text-[10px]">&#8595;</span>
+                    </a>
+                  ) : (
+                    <p className="font-mono text-sm text-ember-400">{floor.name}</p>
+                  )}
                   <p className="text-xs text-parchment-500 mt-0.5 leading-relaxed">{floor.desc}</p>
                 </div>
               </div>
@@ -88,7 +94,7 @@ export default function WorldOfEadromPage() {
       </section>
 
       {/* Level 4 — Kingdoms & Peoples: The Four Nations */}
-      <section className="border-t border-ember-dim/40">
+      <section id="four-nations" className="border-t border-ember-dim/40">
         <div className="mx-auto max-w-4xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-600 mb-1">Level 4 &mdash; Kingdoms &amp; Peoples</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">Arsatir</p>
@@ -123,7 +129,7 @@ export default function WorldOfEadromPage() {
       </section>
 
       {/* Level 4 (continued) — Kingdoms & Peoples: Notable Figures */}
-      <section className="border-t border-ember-dim/40 bg-parchment-900/20">
+      <section id="notable-figures" className="border-t border-ember-dim/40 bg-parchment-900/20">
         <div className="mx-auto max-w-4xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-600 mb-1">Level 4 &mdash; Kingdoms &amp; Peoples</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">Notable Figures</p>
@@ -159,7 +165,7 @@ export default function WorldOfEadromPage() {
       </section>
 
       {/* Level 6 — Arts & Craftsmanship: Essence Magic */}
-      <section className="border-t border-ember-dim/40">
+      <section id="essence-magic" className="border-t border-ember-dim/40">
         <div className="mx-auto max-w-3xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-600 mb-1">Level 6 &mdash; Arts &amp; Craftsmanship</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">The Weave</p>
@@ -191,7 +197,7 @@ export default function WorldOfEadromPage() {
       </section>
 
       {/* Level 7 — Mysteries: The Storm & The Bane */}
-      <section className="border-t border-ember-dim/40">
+      <section id="storm-bane" className="border-t border-ember-dim/40">
         <div className="mx-auto max-w-3xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-600 mb-1">Level 7 &mdash; Mysteries</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">The Darkness</p>
@@ -207,7 +213,7 @@ export default function WorldOfEadromPage() {
       </section>
 
       {/* Coda — The edge of knowledge */}
-      <section className="border-t border-ember-dim/40">
+      <section id="archmasters-hall" className="border-t border-ember-dim/40">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center">
           <div className="mx-auto h-px w-12 bg-ember-600/30 mb-8" />
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-600 mb-4">Level 10 &mdash; The Archmaster&rsquo;s Hall</p>
