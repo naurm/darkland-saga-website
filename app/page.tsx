@@ -83,7 +83,7 @@ export default function HomePage() {
             <div className="mt-6 flex items-center gap-2 text-xs font-mono text-parchment-500">
               <span className="text-parchment-600">·</span>
               <Link href="/why-fantasy" className="hover:text-ember-300 transition-colors underline underline-offset-4 decoration-parchment-700/50">
-                Why fantasy?
+                Read why fantasy matters
               </Link>
               <span className="text-parchment-600">·</span>
             </div>
@@ -95,10 +95,10 @@ export default function HomePage() {
               alt="Hunting Misfortune cover art — a lone figure on a precipice facing a beam of light through the storm"
               className="w-full h-auto"
             />
-            <p className="mt-2 text-[11px] font-mono text-parchment-600 text-center">
-              Illustration by Jeremiah Carrig
-            </p>
           </div>
+          <p className="mt-2 text-[11px] font-mono text-parchment-600 text-center max-w-sm mx-auto">
+            Illustration by Jeremiah Carrig
+          </p>
         </div>
       </section>
 

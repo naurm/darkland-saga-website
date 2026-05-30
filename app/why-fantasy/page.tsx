@@ -1,5 +1,45 @@
 import { LINKS } from "@/lib/constants"
 import Link from "next/link"
+import RotatingQuote, { type Quote } from "@/components/RotatingQuote"
+
+const authorQuotes: Quote[] = [
+  {
+    text: "You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children.",
+    source: "Madeleine L'Engle",
+  },
+  {
+    text: "All you have to do is write one true sentence. Write the truest sentence that you know.",
+    source: "Ernest Hemingway",
+  },
+  {
+    text: "Fill your paper with the breathings of your heart.",
+    source: "William Wordsworth",
+  },
+  {
+    text: "There is something delicious about writing the first words of a story. You never quite know where they'll take you.",
+    source: "Beatrix Potter",
+  },
+  {
+    text: "A story is a way to say something that can't be said any other way, and it takes every word in the story to say what the meaning is.",
+    source: "Flannery O'Connor",
+  },
+  {
+    text: "The first business of a story is to be a good story. When Our Lord made a wheel in the carpenter shop, depend upon it: It was first and foremost a good wheel.",
+    source: "C.S. Lewis",
+  },
+  {
+    text: "A book, too, can be a star, a living fire to lighten the darkness, leading out into the expanding universe.",
+    source: "Madeleine L'Engle",
+  },
+  {
+    text: "The realm of fairy-story is wide and deep and high and filled with many things: all manner of beasts and birds are found there; shoreless seas and stars uncounted; beauty that is an enchantment, and an ever-present peril; both joy and sorrow as sharp as swords.",
+    source: "J.R.R. Tolkien",
+  },
+  {
+    text: "Fantasy remains a human right: we make in our measure and in our derivative mode, because we are made: and not only made, but made in the image and likeness of a Maker.",
+    source: "J.R.R. Tolkien",
+  },
+]
 
 export default function WhyFantasyPage() {
   return (
@@ -72,6 +112,19 @@ export default function WhyFantasyPage() {
           <p>
             Whether building new worlds or exploring old truths, the stories of the Darkland
             Saga remind us that light overcomes darkness&mdash;and hope always has the final word.
+          </p>
+        </div>
+      </section>
+
+      {/* Author quotes rotator */}
+      <section className="mx-auto max-w-3xl px-6 py-16 border-t border-ember-dim text-center">
+        <div className="max-w-lg mx-auto">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-6">
+            Voices on Writing &amp; Story
+          </p>
+          <RotatingQuote quotes={authorQuotes} intervalMs={10000} />
+          <p className="mt-6 font-mono text-[11px] text-parchment-600">
+            click to advance
           </p>
         </div>
       </section>
