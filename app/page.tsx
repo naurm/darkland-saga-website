@@ -51,6 +51,10 @@ const homepageQuotes: Quote[] = [
     text: "Sometimes your fear is a warning. Sometimes you should listen to it.",
     source: "Rowan Stoutfire",
   },
+  {
+    text: "House Stoutfire doesn't back down from any hunt. For anyone.",
+    source: "Rowan Stoutfire, Hunting Misfortune",
+  },
 ]
 
 export default function HomePage() {
