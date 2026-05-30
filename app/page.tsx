@@ -31,6 +31,26 @@ const homepageQuotes: Quote[] = [
     text: "There is more here than I can fully see yet.",
     source: "Tower of Archives",
   },
+  {
+    text: "Like the fire stones against the backdrop of the Storm, they were defiant lights against a cruel darkness. They were the wall even more than the stone and mortar that held it together.",
+    source: "Darkness Kindled",
+  },
+  {
+    text: "The Pillar doesn't shine everywhere. Bane gather in the dark.",
+    source: "Fior, Darkness Kindled",
+  },
+  {
+    text: "Just cause you aren't a coward doesn't mean you're brave, kid.",
+    source: "Rowan Stoutfire, Hunting Misfortune",
+  },
+  {
+    text: "There are many connections that move the world that we can't see though they are right in front of our eyes. All because we think that the ability to see means we aren't blind.",
+    source: "Archmaster Naphos, Tower of Archives",
+  },
+  {
+    text: "Sometimes your fear is a warning. Sometimes you should listen to it.",
+    source: "Rowan Stoutfire",
+  },
 ]
 
 export default function HomePage() {
