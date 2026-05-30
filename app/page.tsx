@@ -48,6 +48,13 @@ export default function HomePage() {
                 Unlock the Companion
               </Link>
             </div>
+            <div className="mt-6 flex items-center gap-2 text-xs font-mono text-parchment-500">
+              <span className="text-parchment-600">·</span>
+              <Link href="/why-fantasy" className="hover:text-ember-300 transition-colors underline underline-offset-4 decoration-parchment-700/50">
+                Why fantasy?
+              </Link>
+              <span className="text-parchment-600">·</span>
+            </div>
           </div>
           {/* Cover art */}
           <div className="rounded-lg overflow-hidden border border-ember-dim/30 max-w-sm mx-auto">

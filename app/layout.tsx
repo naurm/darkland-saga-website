@@ -50,7 +50,7 @@ export default function RootLayout({
             {/* Desktop nav */}
             <div className="hidden md:flex items-center gap-6 text-sm font-mono text-parchment-400">
               <a href="/books" className="hover:text-ember-300 transition-colors">Books</a>
-              <a href="/why-fantasy" className="hover:text-ember-300 transition-colors">Why Fantasy</a>
+              <a href="/why-fantasy" className="hover:text-ember-300 transition-colors">Why Fantasy?</a>
               <a href="/world-of-eadrom" className="hover:text-ember-300 transition-colors">The World</a>
               <a href="/about" className="hover:text-ember-300 transition-colors">About</a>
               <a href="/companion" className="hover:text-ember-300 transition-colors">Companion</a>
