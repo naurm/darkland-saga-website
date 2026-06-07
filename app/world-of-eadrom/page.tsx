@@ -117,9 +117,9 @@ export default function WorldOfEadromPage() {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">The Darkness</p>
           <div className="flex items-center gap-3 mb-6">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 shrink-0 text-ember-500">
-              {/* Bane crest — jagged fracture / corrupted star */}
-              <path d="M12 3l2 5 5 .5-4 3.5 1.5 5.5L12 14l-4.5 3.5L9 12l-4-3.5 5-.5L12 3z" opacity="0.6"/>
-              <path d="M12 3v18M8.5 6.5l7 7M15.5 6.5l-7 7" opacity="0.35"/>
+              {/* Bane crest — broken circle with a through-line */}
+              <circle cx="12" cy="12" r="8" opacity="0.5"/>
+              <path d="M4 4l16 16M12 4v4M12 16v4M4 12h4M16 12h4"/>
             </svg>
             <h2 className="font-display text-2xl sm:text-3xl text-ember-200">The Storm &amp; The Bane</h2>
           </div>
