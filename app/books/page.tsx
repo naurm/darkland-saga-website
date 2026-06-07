@@ -1,5 +1,22 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { BOOKS, LINKS } from "@/lib/constants"
+
+export const metadata: Metadata = {
+  title: "Books",
+  description:
+    "Explore the Darkland Saga — Darkness Kindled (Book One) and Hunting Misfortune (Prequel). Nobledark fantasy by J.L. Allred.",
+  openGraph: {
+    title: "Books of the Darkland Saga — J.L. Allred",
+    description:
+      "Explore the Darkland Saga — Darkness Kindled (Book One) and Hunting Misfortune (Prequel). Nobledark fantasy by J.L. Allred.",
+  },
+  twitter: {
+    title: "Books of the Darkland Saga — J.L. Allred",
+    description:
+      "Explore the Darkland Saga — Darkness Kindled (Book One) and Hunting Misfortune (Prequel). Nobledark fantasy by J.L. Allred.",
+  },
+}
 
 export default function BooksPage() {
   return (
@@ -67,7 +84,7 @@ export default function BooksPage() {
         <div className="rounded-lg border border-ember-dim bg-parchment-900/50 p-8 sm:p-12">
           <div className="flex flex-col sm:flex-row gap-8 items-start">
           <div className="w-full sm:w-48 flex-shrink-0 rounded border border-ember-dim overflow-hidden">
-            <img src="/images/hunting-misfortune-cover.jpg" alt="Hunting Misfortune cover" className="w-full h-auto" />
+            <img src="/images/hunting-misfortune-cover.jpg" alt="Hunting Misfortune cover art — a lone figure on a precipice facing a beam of light through the storm" className="w-full h-auto" />
           </div>
           <div className="flex-1">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-2">Prequel</p>

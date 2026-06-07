@@ -1,5 +1,22 @@
+import type { Metadata } from "next"
 import { LINKS } from "@/lib/constants"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Support",
+  description:
+    "Support the Darkland Saga — read Darkness Kindled for free on Royal Road, buy the author a coffee, or explore exclusive companion content.",
+  openGraph: {
+    title: "Support the Darkland Saga — J.L. Allred",
+    description:
+      "Support the Darkland Saga — read Darkness Kindled for free on Royal Road, buy the author a coffee, or explore exclusive companion content.",
+  },
+  twitter: {
+    title: "Support the Darkland Saga — J.L. Allred",
+    description:
+      "Support the Darkland Saga — read Darkness Kindled for free on Royal Road, buy the author a coffee, or explore exclusive companion content.",
+  },
+}
 
 export default function SupportPage() {
   return (

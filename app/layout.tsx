@@ -3,6 +3,7 @@ import { Inter, DM_Serif_Display, JetBrains_Mono } from "next/font/google"
 import { SITE } from "@/lib/constants"
 import MobileNav from "@/components/MobileNav"
 import BackToTop from "@/components/BackToTop"
+import JsonLd from "@/components/JsonLd"
 import "./globals.css"
 
 const inter = Inter({
@@ -30,6 +31,24 @@ export const metadata: Metadata = {
     template: `%s — ${SITE.name}`,
   },
   description: SITE.description,
+  metadataBase: new URL(SITE.url),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: SITE.name,
+    title: `${SITE.name} — ${SITE.tagline}`,
+    description: SITE.description,
+    url: SITE.url,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE.name} — ${SITE.tagline}`,
+    description: SITE.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
@@ -42,6 +61,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dmSerifDisplay.variable} ${jetbrainsMono.variable} font-sans bg-parchment-950 text-parchment-300 antialiased selection:bg-emberglow/25 selection:text-ember-200`}
       >
+        <JsonLd />
         <header className="fixed top-0 left-0 right-0 z-50 border-b border-ember-dim bg-parchment-950/80 backdrop-blur-sm">
           <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 md:px-6 py-2 md:py-4">
             <a href="/" className="font-display text-lg text-ember-300 hover:text-emberglow-bright transition-colors shrink-0">

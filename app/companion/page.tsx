@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { auth, signOut } from "@/lib/auth"
 import { redirect } from "next/navigation"
 import Link from "next/link"
@@ -14,6 +15,22 @@ const contentTypeLabels: Record<string, string> = {
   glossary: "Glossary",
 }
 
+export const metadata: Metadata = {
+  title: "Companion Portal",
+  description:
+    "The official Darkland Saga companion portal — exclusive lore, short stories, banehunter's logs, chapter commentary, and worldbuilding content for readers.",
+  openGraph: {
+    title: "Companion Portal — Darkland Saga",
+    description:
+      "The official Darkland Saga companion portal — exclusive lore, short stories, banehunter's logs, chapter commentary, and worldbuilding content for readers.",
+  },
+  twitter: {
+    title: "Companion Portal — Darkland Saga",
+    description:
+      "The official Darkland Saga companion portal — exclusive lore, short stories, banehunter's logs, chapter commentary, and worldbuilding content for readers.",
+  },
+}
+
 const contentTypeIcons: Record<string, string> = {
   lore: "📜",
   story: "✍",
@@ -24,6 +41,7 @@ const contentTypeIcons: Record<string, string> = {
   map: "🗺",
   glossary: "📖",
 }
+
 
 export default async function CompanionDashboard() {
   const session = await auth()

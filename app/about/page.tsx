@@ -1,3 +1,21 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about J.L. Allred, author of the Darkland Saga — nobledark fantasy about living darkness, impossible choices, and the light that pushes back.",
+  openGraph: {
+    title: "About J.L. Allred — Darkland Saga Author",
+    description:
+      "Learn about J.L. Allred, author of the Darkland Saga — nobledark fantasy about living darkness, impossible choices, and the light that pushes back.",
+  },
+  twitter: {
+    title: "About J.L. Allred — Darkland Saga Author",
+    description:
+      "Learn about J.L. Allred, author of the Darkland Saga — nobledark fantasy about living darkness, impossible choices, and the light that pushes back.",
+  },
+}
+
 export default function AboutPage() {
   return (
     <>

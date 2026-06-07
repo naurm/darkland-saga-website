@@ -1,8 +1,9 @@
+import type { Metadata } from "next"
 import { LINKS } from "@/lib/constants"
 import Link from "next/link"
-import RotatingQuote, { type Quote } from "@/components/RotatingQuote"
+import RotatingQuote from "@/components/RotatingQuote"
 
-const authorQuotes: Quote[] = [
+const authorQuotes: { text: string; source?: string }[] = [
   {
     text: "You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children.",
     source: "Madeleine L'Engle",
@@ -40,6 +41,25 @@ const authorQuotes: Quote[] = [
     source: "J.R.R. Tolkien",
   },
 ]
+
+// import RotatingQuote
+import type { Quote } from "@/components/RotatingQuote"
+
+export const metadata: Metadata = {
+  title: "Why Fantasy?",
+  description:
+    "Why fantasy matters — J.L. Allred on writing nobledark fantasy, the influence of Tolkien and Lewis, and the power of stories about impossible choices.",
+  openGraph: {
+    title: "Why Fantasy? — J.L. Allred on Nobledark Storytelling",
+    description:
+      "Why fantasy matters — J.L. Allred on writing nobledark fantasy, the influence of Tolkien and Lewis, and the power of stories about impossible choices.",
+  },
+  twitter: {
+    title: "Why Fantasy? — J.L. Allred on Nobledark Storytelling",
+    description:
+      "Why fantasy matters — J.L. Allred on writing nobledark fantasy, the influence of Tolkien and Lewis, and the power of stories about impossible choices.",
+  },
+}
 
 export default function WhyFantasyPage() {
   return (

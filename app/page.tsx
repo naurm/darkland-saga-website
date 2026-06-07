@@ -1,8 +1,8 @@
 import Link from "next/link"
 import { BOOKS, LINKS } from "@/lib/constants"
-import RotatingQuote, { type Quote } from "@/components/RotatingQuote"
+import RotatingQuote from "@/components/RotatingQuote"
 
-const homepageQuotes: Quote[] = [
+const homepageQuotes: { text: string; source?: string }[] = [
   {
     text: "Death incarnate, called 'bane', came with The Storm, and everything they touched turned to Darkness.",
     source: "The Darkland Saga",

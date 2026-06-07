@@ -1,4 +1,21 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "World of Eadrom — Tower of Archives",
+  description:
+    "Explore the world of the Darkland Saga — the Tower of Archives, the Four Nations, Essence Magic, the Storm and the Bane, and biographical records from Ciallmhar.",
+  openGraph: {
+    title: "World of Eadrom — Tower of Archives | Darkland Saga",
+    description:
+      "Explore the world of the Darkland Saga — the Tower of Archives, the Four Nations, Essence Magic, the Storm and the Bane, and biographical records from Ciallmhar.",
+  },
+  twitter: {
+    title: "World of Eadrom — Tower of Archives | Darkland Saga",
+    description:
+      "Explore the world of the Darkland Saga — the Tower of Archives, the Four Nations, Essence Magic, the Storm and the Bane, and biographical records from Ciallmhar.",
+  },
+}
 
 const floors = [
   { level: 1, name: "The Threshold", desc: "Public entry, exhibits, reception, and orientation. Where every visitor begins." },
