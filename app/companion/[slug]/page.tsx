@@ -2,6 +2,7 @@ import { auth } from "@/lib/auth"
 import { redirect, notFound } from "next/navigation"
 import { prisma } from "@/lib/db"
 import Link from "next/link"
+import ArchiveSymbol from "@/components/archive-symbols"
 
 const contentTypeLabels: Record<string, string> = {
   lore: "Lore Entry",
@@ -117,9 +118,7 @@ export default async function ContentViewPage({
       {(item.contentType === "lore" || item.contentType === "story" || item.contentType === "log") && (
         <div className={`companion-callout companion-callout--${item.contentType} mb-8`}>
           <div className="companion-callout-icon">
-            {item.contentType === "lore" && "📜"}
-            {item.contentType === "story" && "✍"}
-            {item.contentType === "log" && "📓"}
+            <ArchiveSymbol type={item.contentType} size={16} />
           </div>
           <div className="companion-callout-text">
             <p className="text-xs font-mono uppercase tracking-wider companion-callout-label">

@@ -3,6 +3,7 @@ import { auth, signOut } from "@/lib/auth"
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import { prisma } from "@/lib/db"
+import ArchiveSymbol from "@/components/archive-symbols"
 
 const contentTypeLabels: Record<string, string> = {
   lore: "Lore",
@@ -31,16 +32,7 @@ export const metadata: Metadata = {
   },
 }
 
-const contentTypeIcons: Record<string, string> = {
-  lore: "📜",
-  story: "✍",
-  log: "📓",
-  art: "🎨",
-  commentary: "💬",
-  deleted_scene: "✂",
-  map: "🗺",
-  glossary: "📖",
-}
+
 
 
 export default async function CompanionDashboard() {
@@ -164,7 +156,8 @@ export default async function CompanionDashboard() {
             <div key={type}>
               <div className="companion-section-rule mb-4">
                 <span className="companion-section-label">
-                  {contentTypeIcons[type] || "📜"} {contentTypeLabels[type] || type}
+                  <ArchiveSymbol type={type} size={14} className="-mt-0.5" />
+                  <span className="ml-1.5">{contentTypeLabels[type] || type}</span>
                 </span>
               </div>
               <div className="space-y-2">

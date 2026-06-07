@@ -115,7 +115,14 @@ export default function WorldOfEadromPage() {
         <div className="mx-auto max-w-3xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-300 mb-1">Level 7 &mdash; Mysteries</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">The Darkness</p>
-          <h2 className="font-display text-2xl sm:text-3xl text-ember-200 mb-6">The Storm &amp; The Bane</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 shrink-0 text-ember-500">
+              {/* Bane crest — jagged fracture / corrupted star */}
+              <path d="M12 3l2 5 5 .5-4 3.5 1.5 5.5L12 14l-4.5 3.5L9 12l-4-3.5 5-.5L12 3z" opacity="0.6"/>
+              <path d="M12 3v18M8.5 6.5l7 7M15.5 6.5l-7 7" opacity="0.35"/>
+            </svg>
+            <h2 className="font-display text-2xl sm:text-3xl text-ember-200">The Storm &amp; The Bane</h2>
+          </div>
           <div className="space-y-4 text-sm sm:text-base text-parchment-400 leading-relaxed">
             <p>The Storm is a dominating force of darkness over Eadrom &mdash; clouds of pure black, its wall stretching as far as the eye can see, bunching against the border of Arsatir, demanding entry.</p>
             <p><em>Bane</em> are ill-made creatures sent beyond the borders under cover of the Storm. Most are wild animals corrupted by other bane. Infected humans die of the corruption if not treated quickly. Bane cannot survive long in the light.</p>
@@ -131,7 +138,15 @@ export default function WorldOfEadromPage() {
         <div className="mx-auto max-w-3xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-300 mb-1">Level 6 &mdash; Arts &amp; Craftsmanship</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">The Weave</p>
-          <h2 className="font-display text-2xl sm:text-3xl text-ember-200 mb-6">Essence Magic</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 shrink-0 text-ember-500">
+              {/* Essence Magic crest — overlapping diamond with central knot */}
+              <path d="M12 4l8 8-8 8-8-8 8-8z"/>
+              <circle cx="12" cy="12" r="2"/>
+              <path d="M4 12h16M12 4v16" opacity="0.3"/>
+            </svg>
+            <h2 className="font-display text-2xl sm:text-3xl text-ember-200">Essence Magic</h2>
+          </div>
           <div className="space-y-4 text-sm sm:text-base text-parchment-400 leading-relaxed">
             <p>Essence stones are found at locations of extreme elemental intensity. Each stone attunes to the element of its origin. To use a stone&rsquo;s power, one must <em>bond</em> with it &mdash; through prolonged contact, deliberate concentration, or using an already-bonded stone as a bridge.</p>
             <p>Weaving requires concentration and practice. Each element demands a different mindset:</p>
@@ -162,7 +177,17 @@ export default function WorldOfEadromPage() {
         <div className="mx-auto max-w-4xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-300 mb-1">Level 4 &mdash; Kingdoms &amp; Peoples</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">Arsatir</p>
-          <h2 className="font-display text-2xl sm:text-3xl text-ember-200 mb-8">The Four Nations</h2>
+          <div className="flex items-center gap-3 mb-8">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 shrink-0 text-ember-500">
+              {/* Four Nations crest — four diamonds in a cross */}
+              <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+              <circle cx="12" cy="7" r="1.5" fill="currentColor" opacity="0.4"/>
+              <circle cx="17" cy="12" r="1.5" fill="currentColor" opacity="0.4"/>
+              <circle cx="7" cy="12" r="1.5" fill="currentColor" opacity="0.4"/>
+              <circle cx="12" cy="17" r="1.5" fill="currentColor" opacity="0.4"/>
+            </svg>
+            <h2 className="font-display text-2xl sm:text-3xl text-ember-200">The Four Nations</h2>
+          </div>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded border border-ember-dim bg-parchment-900/30 p-6">
               <p className="font-mono text-xs uppercase tracking-[0.1em] text-ember-400 mb-1">Fire</p>
@@ -197,7 +222,16 @@ export default function WorldOfEadromPage() {
         <div className="mx-auto max-w-4xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-300 mb-1">Level 4 &mdash; Kingdoms &amp; Peoples</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">Notable Figures</p>
-          <h2 className="font-display text-2xl sm:text-3xl text-ember-200 mb-2">Biographical Records</h2>
+          <div className="flex items-center gap-3 mb-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 shrink-0 text-ember-500">
+              {/* Biographical Records crest — figure / scroll */}
+              <circle cx="12" cy="7" r="2.5"/>
+              <path d="M6 19c0-3 2.7-5 6-5s6 2 6 5"/>
+              <path d="M14 6l2 2-2 2" opacity="0.4"/>
+              <path d="M18 8l2 2-2 2" opacity="0.4"/>
+            </svg>
+            <h2 className="font-display text-2xl sm:text-3xl text-ember-200">Biographical Records</h2>
+          </div>
           <p className="text-sm text-parchment-500 mb-8 max-w-lg">Fragments recovered from field notes, archival records, and banehunter journals.</p>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded border border-ember-dim bg-parchment-950/50 p-5">
@@ -234,7 +268,17 @@ export default function WorldOfEadromPage() {
         <div className="mx-auto max-w-3xl px-6 py-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ember-300 mb-1">Level 3 &mdash; Military History</p>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">The Light</p>
-          <h2 className="font-display text-2xl sm:text-3xl text-ember-200 mb-6">The Pillar of Light</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 shrink-0 text-ember-500">
+              {/* Pillar of Light crest — standing column with rays */}
+              <path d="M9 3v18M15 3v18"/>
+              <path d="M12 2v2"/>
+              <path d="M9 5l-3 3M15 5l3 3"/>
+              <path d="M5 14h3M16 14h3" opacity="0.5"/>
+              <path d="M6 18l2-2M18 18l-2-2" opacity="0.35"/>
+            </svg>
+            <h2 className="font-display text-2xl sm:text-3xl text-ember-200">The Pillar of Light</h2>
+          </div>
           <div className="space-y-4 text-sm sm:text-base text-parchment-400 leading-relaxed">
             <p>Just beyond the southern mountains of Ciallmhar, the Pillar stretches toward the sky &mdash; the only thing keeping the Storm and the Bane from finding a permanent home in Arsatir. Clouds swirl around the mile-wide beacon.</p>
             <p>No one fully understands the ancient magic that keeps it lit. Every year a ritual involving all four nations recharges its light. For those on the borders, the hours feel like days while the ritual is completed.</p>
