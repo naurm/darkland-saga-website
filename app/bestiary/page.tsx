@@ -346,17 +346,6 @@ export default function PublicBestiaryPage() {
               {(selectedEntry.publicExcerpt || selectedEntry.physicalDescription) && (
                 <p>{selectedEntry.publicExcerpt || selectedEntry.physicalDescription}</p>
               )}
-
-              {selectedEntry.sections && Object.entries(selectedEntry.sections).map(([key, val]) => (
-                <div key={key}>
-                  <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-2">
-                    {key.replace(/_/g, " ")}
-                  </h3>
-                  {val.split("\n").filter(Boolean).map((line: string, i: number) => (
-                    <p key={i} className="mb-2">{line}</p>
-                  ))}
-                </div>
-              ))}
             </div>
 
             {/* Footer */}
