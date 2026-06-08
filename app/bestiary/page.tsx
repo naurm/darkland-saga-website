@@ -69,7 +69,7 @@ export default function PublicBestiaryPage() {
 
       return true
     })
-  }, [search, categoryFilter, bookFilter])
+  }, [entries, search, categoryFilter, bookFilter])
 
   const creatures = filtered.filter((e) => e.type === "creature")
   const appendices = filtered.filter((e) => e.type === "appendix")
