@@ -49,7 +49,6 @@ export default function MobileNav() {
           <a href="/books" onClick={close} className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Books</a>
           <a href="/why-fantasy" onClick={close} className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Why Fantasy</a>
           <a href="/world-of-eadrom" onClick={close} className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">The World</a>
-          <a href="/bestiary" onClick={close} className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Bestiary</a>
           <a href="/about" onClick={close} className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">About</a>
           <a href="/companion" onClick={close} className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Companion</a>
           <a href="/support" onClick={close} className="rounded px-3 py-2 hover:bg-ember-900/20 hover:text-ember-300 transition-colors">Support</a>

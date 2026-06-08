@@ -77,6 +77,12 @@ export default function AboutPage() {
         <p className="text-sm text-parchment-400 text-center leading-relaxed max-w-md mx-auto">
           Follow the Darkland Saga on Royal Road for updates, new chapters, and the latest releases.
         </p>
+        <p className="text-sm text-parchment-500 text-center mt-4">
+          Or reach out directly at{" "}
+          <a href="mailto:jlallred.author@gmail.com" className="text-ember-400 underline hover:text-ember-300 transition-colors">
+            jlallred.author@gmail.com
+          </a>
+        </p>
       </section>
     </>
   )

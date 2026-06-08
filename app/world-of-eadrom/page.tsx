@@ -130,6 +130,22 @@ export default function WorldOfEadromPage() {
           <blockquote className="my-8 border-l-2 border-ember-700/50 pl-5 py-2">
             <p className="font-display text-base text-ember-300 italic leading-relaxed">&ldquo;Death incarnate, called &lsquo;bane&rsquo;, came with The Storm, and everything they touched turned to Darkness.&rdquo;</p>
           </blockquote>
+
+          <div className="mt-8 rounded border border-ember-dim bg-parchment-900/40 p-5 text-center">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-400 mb-2">Bane Archive</p>
+            <p className="text-sm text-parchment-400 mb-3">
+              Browse the complete catalog of known bane, aberrant creatures, and corrupted beings in the public bestiary.
+            </p>
+            <Link
+              href="/bestiary"
+              className="inline-flex items-center gap-1.5 font-mono text-sm text-ember-400 hover:text-emberglow-bright transition-colors"
+            >
+              Enter the Bestiary
+              <svg className="h-3.5 w-3.5" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M1 7h12M8 2l5 5-5 5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
 

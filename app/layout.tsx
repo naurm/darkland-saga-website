@@ -81,7 +81,6 @@ export default function RootLayout({
               <a href="/books" className="hover:text-ember-300 transition-colors">Books</a>
               <a href="/why-fantasy" className="hover:text-ember-300 transition-colors">Why Fantasy?</a>
               <a href="/world-of-eadrom" className="hover:text-ember-300 transition-colors">The World</a>
-              <a href="/bestiary" className="hover:text-ember-300 transition-colors">Bestiary</a>
               <a href="/about" className="hover:text-ember-300 transition-colors">About</a>
               <a href="/companion" className="hover:text-ember-300 transition-colors">Companion</a>
               <a href="/support" className="hover:text-ember-300 transition-colors">Support</a>
@@ -116,6 +115,12 @@ export default function RootLayout({
                 className="hover:text-ember-300 transition-colors"
               >
                 Royal Road
+              </a>
+              <a
+                href="mailto:jlallred.author@gmail.com"
+                className="hover:text-ember-300 transition-colors"
+              >
+                Contact
               </a>
             </div>
           </div>
