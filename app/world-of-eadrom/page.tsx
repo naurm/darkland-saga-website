@@ -270,12 +270,11 @@ export default function WorldOfEadromPage() {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-ember-500 mb-3">The Light</p>
           <div className="flex items-center gap-3 mb-6">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 shrink-0 text-ember-500">
-              {/* Pillar of Light crest — tapered pillar with a beacon crown */}
-              <path d="M10 21h4"/>
-              <path d="M11 21V5l1-2 1 2v16"/>
-              <path d="M12 3l3 4M12 3l-3 4" opacity="0.5"/>
-              <path d="M9 16c0 0 1.5-2 3-2s3 2 3 2" opacity="0.4"/>
-              <path d="M7 18c0 0 2.5-3 5-3s5 3 5 3" opacity="0.25"/>
+              {/* Pillar of Light crest — standing stone slab with radiance */}
+              <rect x="9" y="3" width="6" height="18" rx="1"/>
+              <path d="M4 8l3 2M20 8l-3 2" opacity="0.5"/>
+              <path d="M2 12l3 1M22 12l-3 1" opacity="0.35"/>
+              <path d="M4 16l3-1M20 16l-3-1" opacity="0.25"/>
             </svg>
             <h2 className="font-display text-2xl sm:text-3xl text-ember-200">The Pillar of Light</h2>
           </div>
