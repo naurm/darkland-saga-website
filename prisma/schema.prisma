@@ -134,6 +134,9 @@ model BestiaEntry {
 
   physicalDescription String @default("")
 
+  /// Public-friendly blurb — overrides physicalDescription on the public page
+  publicExcerpt   String? @default("")
+
   /// Sub-sections like Behavior, Origin & Lore, Notable Encounters, etc.
   sections    Json     @default("{}")
 

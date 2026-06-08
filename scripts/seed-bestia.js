@@ -27,6 +27,7 @@ async function main() {
       aliases: entry.aliases || null,
       threatRating: entry.threatRating || null,
       physicalDescription: entry.physicalDescription || "",
+      publicExcerpt: entry.publicExcerpt || null,
       sections: entry.sections || {},
       spoilers: entry.spoilers || [],
       restricted: entry.restricted || false,

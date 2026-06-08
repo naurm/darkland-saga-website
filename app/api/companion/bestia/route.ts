@@ -41,6 +41,7 @@ export async function POST(req: NextRequest) {
     aliases,
     threatRating,
     physicalDescription,
+    publicExcerpt,
     sections,
     spoilers,
     restricted,
@@ -54,39 +55,27 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "catalogId and title required" }, { status: 400 })
   }
 
+  const data = {
+    title,
+    type: type || "creature",
+    classification: classification || null,
+    aliases: aliases || null,
+    threatRating: threatRating || null,
+    physicalDescription: physicalDescription || "",
+    publicExcerpt: publicExcerpt || null,
+    sections: sections || {},
+    spoilers: spoilers || [],
+    restricted: restricted ?? false,
+    sourceBooks: sourceBooks || [],
+    crossReferences: crossReferences || [],
+    fieldNotes: fieldNotes || [],
+    published: published ?? false,
+  }
+
   const entry = await prisma.bestiaEntry.upsert({
     where: { catalogId },
-    update: {
-      title,
-      type: type || "creature",
-      classification: classification || null,
-      aliases: aliases || null,
-      threatRating: threatRating || null,
-      physicalDescription: physicalDescription || "",
-      sections: sections || {},
-      spoilers: spoilers || [],
-      restricted: restricted ?? false,
-      sourceBooks: sourceBooks || [],
-      crossReferences: crossReferences || [],
-      fieldNotes: fieldNotes || [],
-      published: published ?? false,
-    },
-    create: {
-      catalogId,
-      title,
-      type: type || "creature",
-      classification: classification || null,
-      aliases: aliases || null,
-      threatRating: threatRating || null,
-      physicalDescription: physicalDescription || "",
-      sections: sections || {},
-      spoilers: spoilers || [],
-      restricted: restricted ?? false,
-      sourceBooks: sourceBooks || [],
-      crossReferences: crossReferences || [],
-      fieldNotes: fieldNotes || [],
-      published: published ?? false,
-    },
+    update: data,
+    create: { catalogId, ...data },
   })
 
   return NextResponse.json({ success: true, entry })

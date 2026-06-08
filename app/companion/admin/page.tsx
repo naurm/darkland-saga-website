@@ -325,6 +325,7 @@ interface BestiaEntry {
   aliases?: string | null
   threatRating?: string | null
   physicalDescription: string
+  publicExcerpt?: string | null
   sections: Record<string, string>
   spoilers: string[]
   restricted: boolean
@@ -350,6 +351,7 @@ function BestiaEditor() {
   const [aliases, setAliases] = useState("")
   const [threatRating, setThreatRating] = useState("")
   const [physicalDescription, setPhysicalDescription] = useState("")
+  const [publicExcerpt, setPublicExcerpt] = useState("")
   const [sectionsJson, setSectionsJson] = useState("{}")
   const [spoilers, setSpoilers] = useState("")
   const [restricted, setRestricted] = useState(false)
@@ -374,6 +376,7 @@ function BestiaEditor() {
     setAliases(entry.aliases || "")
     setThreatRating(entry.threatRating || "")
     setPhysicalDescription(entry.physicalDescription || "")
+    setPublicExcerpt(entry.publicExcerpt || "")
     setSectionsJson(JSON.stringify(entry.sections || {}, null, 2))
     setSpoilers((entry.spoilers || []).join(", "))
     setRestricted(entry.restricted)
@@ -393,6 +396,7 @@ function BestiaEditor() {
     setAliases("")
     setThreatRating("")
     setPhysicalDescription("")
+    setPublicExcerpt("")
     setSectionsJson("{}")
     setSpoilers("")
     setRestricted(false)
@@ -417,6 +421,7 @@ function BestiaEditor() {
       aliases: aliases.trim() || undefined,
       threatRating: threatRating.trim() || undefined,
       physicalDescription,
+      publicExcerpt: publicExcerpt.trim() || undefined,
       sections: parsedSections,
       spoilers: spoilers.split(",").map((s) => s.trim()).filter(Boolean),
       restricted,
@@ -581,8 +586,17 @@ function BestiaEditor() {
 
           <div>
             <label className="block text-sm text-parchment-400 mb-1">Physical Description</label>
-            <textarea value={physicalDescription} onChange={(e) => setPhysicalDescription(e.target.value)} rows={5}
-              className="w-full rounded border border-ember-dim bg-parchment-900 px-3 py-2 text-sm text-parchment-200" placeholder="Describe the creature..." />
+            <div>
+              <label className="block text-sm text-parchment-400 mb-1">Physical Description (full)</label>
+              <textarea value={physicalDescription} onChange={(e) => setPhysicalDescription(e.target.value)} rows={5}
+                className="w-full rounded border border-ember-dim bg-parchment-900 px-3 py-2 text-sm text-parchment-200" placeholder="Full description — seen in companion archive" />
+            </div>
+
+            <div>
+              <label className="block text-sm text-parchment-400 mb-1">Public Excerpt (overrides description on /bestiary)</label>
+              <textarea value={publicExcerpt} onChange={(e) => setPublicExcerpt(e.target.value)} rows={3}
+                className="w-full rounded border border-ember-dim bg-parchment-900 px-3 py-2 text-sm text-parchment-200" placeholder="Shorter public-friendly version — leave blank to show full description" />
+            </div>
           </div>
 
           <div>

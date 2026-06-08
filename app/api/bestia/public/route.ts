@@ -18,6 +18,7 @@ export async function GET() {
       aliases: true,
       threatRating: true,
       physicalDescription: true,
+      publicExcerpt: true,
       sections: true,
       spoilers: true,
       sourceBooks: true,

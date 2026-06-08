@@ -9,6 +9,7 @@ interface CompendiumEntry {
   type: string
   spoilers: string[]
   physicalDescription?: string
+  publicExcerpt?: string | null
   sections?: Record<string, string>
   threatRating?: string
   classification?: string
@@ -55,6 +56,7 @@ export default function PublicBestiaryPage() {
         const matchesSearch =
           e.title.toLowerCase().includes(q) ||
           e.catalogId.toLowerCase().includes(q) ||
+          (e.publicExcerpt?.toLowerCase().includes(q)) ||
           (e.physicalDescription?.toLowerCase().includes(q))
         if (!matchesSearch) return false
       }
@@ -189,8 +191,9 @@ export default function PublicBestiaryPage() {
           </h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {creatures.map((entry) => {
-              const preview = entry.physicalDescription
-                ? truncateText(entry.physicalDescription, 120)
+              const publicBody = entry.publicExcerpt || entry.physicalDescription || ""
+              const preview = publicBody
+                ? truncateText(publicBody, 120)
                 : ""
 
               return (
@@ -340,8 +343,8 @@ export default function PublicBestiaryPage() {
 
             {/* Body */}
             <div className="max-h-[60vh] overflow-y-auto pr-1 space-y-4 text-sm text-parchment-300 leading-relaxed">
-              {selectedEntry.physicalDescription && (
-                <p>{selectedEntry.physicalDescription}</p>
+              {(selectedEntry.publicExcerpt || selectedEntry.physicalDescription) && (
+                <p>{selectedEntry.publicExcerpt || selectedEntry.physicalDescription}</p>
               )}
 
               {selectedEntry.sections && Object.entries(selectedEntry.sections).map(([key, val]) => (
