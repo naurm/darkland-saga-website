@@ -1,0 +1,639 @@
+{
+  "meta": {
+    "total": 31,
+    "creatures": 28,
+    "appendices": 3,
+    "restricted": 2
+  },
+  "entries": [
+    {
+      "catalogId": "TOA/BST/001",
+      "title": "Bane (General Category)",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled",
+        "Hunting Misfortune"
+      ],
+      "restricted": false,
+      "physicalDescription": "Bane are creatures infused with raw darkness, their original forms twisted beyond recognition by the One Beyond's sifting. Their colors range through every shade of black, from matte pitch to oily glimmer. Fur, where present, is wet with shadow-wisps curling off it like steam from rot. Wounds weep darkness in place of blood. No two bane look precisely alike — the variety of forms is near-infinite, from wolf-like shapes to humanoid silhouettes to beasts of no natural analogue.",
+      "sections": {
+        "Behavior & Combat Notes": "Bane are mindless in the aggregate but can be directed by higher agents — Outriders, herdsmen, and darkstone-wielding controllers. During Renewals (the yearly invasions), mounted herders drive them in disciplined formations. Bane pour over walls, climb battlements, and attack with relentless hunger. They hate light; exposure to bright essence-weaving or a concentrated light source causes them to recoil or dissolve. Fire essence is particularly effective for burning them clean.\n\nDarkness from bane leaves stains on whatever they touch — wood, stone, flesh. These dark stains must be burned out with fire essence to prevent corruption from spreading (DK, Ch. 16). Bane weapons can drain fire essence from victims through wounds, causing death by essence depletion (DK, Ch. 5).\n\nOrigin & Lore:\nBane do not arise spontaneously. They are created. When the One Beyond takes a soul of someone who died under the Storm's shadow, he \"sifts it down to its raw darkness\" and uses that darkness to transform creatures into bane (DK, Ch. 27). The Voidrealm is the womb of the bane — a dimension of pure darkness where they are born and marshaled before being sent into the world.\n\nRowan of the Banewardens articulates a useful rule of thumb: *\"Greater darkness will beat weaker light. Greater light will always beat weaker darkness.\"* (HM, Ch. 1) — suggesting the contest is one of intensity, not inherent advantage.",
+        "Notable Encounters": "- **DK Prologue:** The first Darktide — a swarm of bane overwhelms the Northern Wall. Brand the Bold detonates a firestone to stop them.\n- **DK Ch. 15:** Vast herds of bane, numbering in the thousands, are driven through Darkland valleys into a mountain fortress.\n- **DK Ch. 24–31:** Bane pour through a breached barrier in the Voidrealm into Ciallmhar itself.\n- **HM Ch. 1–9:** Bane infest the Eventide Mine; the Pillar of Light proves to be an absolute bane-killer.\n- **HM Ch. 20:** Misfortune demonstrates a darkstone-based bane-control technique, entering a bane's consciousness to command it.",
+        "Researcher's Notes": "> The variety of bane forms has led some junior archivists to propose sub-classifications by morphology. I have resisted this impulse. The forms are too numerous, and the One Beyond is not known to respect our taxonomies. Better to catalog what we know than to pretend we know all.\n> — Archivist M. Wren, Level 7 Field Records"
+      },
+      "crossReferences": [
+        "TOA/BST/018 — The One Beyond (source of all bane)",
+        "TOA/BST/019 — Deathwinds / Voidwinds (the Storm's manifestation)",
+        "TOA/BST/020 — Darkstone (tool for bane control)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK",
+        "HM"
+      ],
+      "classification": "Spawn of the Storm. Dark-aligned creatures of every conceivable form.",
+      "aliases": "Dark spawn, Storm-spawn, The Sifted.",
+      "threatRating": "VARIABLE — See sub-entries  │"
+    },
+    {
+      "catalogId": "TOA/BST/002",
+      "title": "The Outrider (Prime)",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": true,
+      "physicalDescription": "A tall, slender figure in a billowing black cloak. Beneath the hood is no face — only a shadowy void where features should be. The hands are thin, vaporous, and deathly cold. Its blade is forged of dripping darkness. At its chest, a darkstone floats within the cloaked form — but when the trapped fragment of Brand's soul asserts itself, the chest glows with a firestone-like light, warm and bright.\n\nWhen sufficiently weakened, the cloak's illusion frays, revealing patches of human-like flesh beneath (DK, Ch. 20). This is not a costume — it is the vestige of the man it was made from.",
+      "sections": {
+        "Behavior & Combat Notes": "- Can move through shadows (shadow-walk), appearing and disappearing at will; this ability requires rest afterward\n- Wields a black blade that shatters essence weaves on contact\n- Suppresses light sources, creating spheres of anti-light\n- Shoots dark tendrils from beneath the cloak\n- Drains life essence from victims to create darkstones\n- Fragments its own soul to implant into human hosts, creating herdsmen\n- Can sense essence weaves and essence stones at a distance\n- Feared even by other darkness-aligned entities — Feldspar's Blackstone faction considers it a liability to be destroyed",
+        "Origin & Lore": "The Outrider is Brand the Bold — Fior's father.\n\nWhen Brand detonated the firestone on the Northern Wall, his soul was too powerful for the One Beyond to fully sift. A fragment of Brand's soul survived within the firestone he was holding. The servant of the One Beyond found the stone, detected a mind within it, and a violent struggle between fire and darkness ensued. The Outrider was born — a twisted fusion of darkness and an unquenchable ember of Brand's soul.\n\n*\"The idea of a soul eluding the One Beyond infuriated him… When it finished the Outrider was born. In reality, the One Beyond was only able to capture a piece of your father's soul.\"* — Nihal (DK, Ch. 27)",
+        "Notable Encounters": "- **DK Ch. 7:** First appearance — abducts Private Tellier, slaughters an entire squad.\n- **DK Ch. 12–13:** Lair encounter; failed rescue of Private Dehl.\n- **DK Ch. 19–20:** Three Outriders attack during Darktide; Holt fights one; one is killed.\n- **DK Ch. 27:** Fior touches the Outrider's chest and feels Brand's presence — an overwhelming wave of loss, imprisonment, and spiritual torture. The Outrider saves Fior's carving of Brand's face, hesitates, drops it, and flees.\n- **DK Ch. 29–31:** Final confrontation in the Voidrealm. The Outrider throws Fior to safety before being engulfed by deathwinds. *\"Brand is buried now, Fior. Deep. He'll never see the light again.\"*\n- **DK Ch. 37:** Fate unresolved.",
+        "Researcher's Notes": "> I have read Lieutenant Fior's deposition on this matter. It is difficult reading. The creature that nearly killed him, that consumed so many of his countrymen, carried his father's soul. The Archmaster has sealed the full account in Level 8. What I am permitted to record here is this: the Outrider wept. Not with tears — but the Void trembled when that remnant of Brand recognized his son. We do not know if this creature can be saved or if Brand is truly buried. But we know he is not entirely gone.\n> — Archivist M. Wren, with express authorization from Archmaster Naphos"
+      },
+      "crossReferences": [
+        "TOA/BST/003 — Herdsmen (soul-fragments of the Outrider)",
+        "TOA/BST/018 — The One Beyond (creator of the Outrider)",
+        "TOA/BST/028 — Void Outrider (a distinct, later Outrider entity)",
+        "TOA/APP/003 — The Ancient / Touwyl (may hold means of severing such fusions)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Unique entity. Soul-fused hybrid of darkness and remnant light.",
+      "threatRating": "Critical — coordinated only."
+    },
+    {
+      "catalogId": "TOA/BST/003",
+      "title": "Herdsmen (Spawn-Outriders)",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": false,
+      "physicalDescription": "Visually identical to the Prime Outrider — billowing black cloaks, no visible face, dark blades. Close inspection reveals subtle differences: less stable forms, more erratic movements. Darker and less refined than the Prime.",
+      "sections": {
+        "Behavior & Combat Notes": "Herdsmen are created by implanting fragments of the Prime Outrider's soul into living human hosts. They serve the Outrider directly. Ranged in competence from barely functional to fully operational. They are fueled by darkstones embedded in their forms to maintain connection to the Prime.\n\nThey are less powerful than the Prime Outrider — they can be \"killed,\" at which point their bodies dissolve back into darkness, leaving behind only the corrupted human host's remains.",
+        "Origin & Lore": "The creation process involves Blackstone cultists capturing victims, draining them of essence, and the Outrider implanting a fragment of itself into them. The result is a hybrid — part darkness, part human soul, bound to the Prime Outrider's will.\n\n*\"Herdsmen are pieces of the original Outrider coupled with hosts. They are fueled by darkstones to maintain the connection with him.\"* (DK, Ch. 26)\n\nThe Prime Outrider can command them and shares a connection with them — when one was killed outside Holt's house, Fior realized he might have been killing a victim, not a monster.",
+        "Known Herdsmen": "- **Captain Fenley** — Corrupted Ciallmhar Captain, sacrificed to the Barrier Device (DK, Ch. 22–29)\n- **Private Tellier** — First confirmed victim of the Outrider's draining ritual (DK, Ch. 9)\n- **Sergeant Thale** — Northern March veteran, corrupted, betrayed Fior (DK, Ch. 28)\n- **Corporal Flintforge (Harlo)** — Kingsguard, Outrider pawn (DK, Ch. 8+)",
+        "Near-Corruption": "- **Nihal** — Almost turned in DK Ch. 26; Fior interrupted the binding ritual before completion.",
+        "Researcher's Notes": "> The ethical implications of fighting herdsmen have troubled me since I first understood the mechanism. Every herdsman killed is also a dead victim. The Banewardens have developed protocols for confirmation — checking for the darkstone signature — but I am told none have been recovered alive. The question of whether a herdsman can be saved, as Fior nearly saved Nihal, remains open.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/002 — The Outrider (Prime) (source of herdsman fragments)",
+        "TOA/BST/020 — Darkstone (fuel for herdsman connection)",
+        "TOA/BST/028 — Void Outrider (distinct entity, not a herdsman)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Human hosts implanted with Outrider soul-fragments.",
+      "threatRating": "High — capable of independent combat and command."
+    },
+    {
+      "catalogId": "TOA/BST/004",
+      "title": "Bane Herders (Mounted Figures)",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": false,
+      "physicalDescription": "Hooded figures mounted on dark, unnamed beasts. They carry long staffs. Their faces are obscured, their nature unclear. Whether they are corrupted humans, autonomous bane forms, or a distinct kind of creature has not been definitively established.",
+      "sections": {
+        "Behavior & Combat Notes": "Bane Herders do not fight directly — they drive bane. They function like shepherds, keeping herds organized and separated, driving them into mountain fortresses and through passes. Their existence implies a level of coordination behind the yearly Renewal invasions that goes deeper than the random violence of a mindless swarm.",
+        "Origin & Lore": "Only observed in the Darkland itself, well beyond the Northern Wall. First documented by Rowan's expedition in DK Ch. 15, who described them as *\"mounted figures with staffs [that] drove the bane like shepherds driving a flock.\"*\n\nWhether they are servants of the One Beyond, creations of the Outrider, or a third party managing bane distribution remains an open question. Given that they operate in the valley leading to the mountain fortress where bane are herded, they likely serve the same chain of command as the Outriders.",
+        "Notable Encounters": "- **DK Ch. 15:** Rowan's expedition witnesses bane herds being driven in disciplined formations near a mountain fortress in Darkland.",
+        "Researcher's Notes": "> We have only one observation of these figures. Rowan Stoutfire's account is credible, but single-source. I would give much for a second expedition into the Darkland — but the Council deems it too risky while Ciallmhar recovers.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General) (the flocks they drive)",
+        "TOA/BST/002 — The Outrider (possible commander)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Intelligent bane-support agents.",
+      "threatRating": "Moderate — force-multipliers, rarely direct combatants."
+    },
+    {
+      "catalogId": "TOA/BST/005",
+      "title": "Werehare",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": false,
+      "physicalDescription": "Tall, long-limbed humanoid creatures with elongated ears and cold, unblinking red eyes. Faces expressionless, as though carved from stone. Move on all fours in a hunched, unnatural gait when charging. Lithe builds, eerily silent in motion. Covered in dark fur.",
+      "sections": {
+        "Behavior & Combat Notes": "Stealth specialists. Their signature kill is a chokehold — long fingers clamp over the prey's nose and mouth, suffocating them without a sound. They emit no snarling, no fang-baring, no warning of any kind.\n\nWhen a werehare dies, it releases a soundless cry that only other werehares can hear, drawing the entire pack. This makes killing even one a dangerous proposition unless the rest of the pack can be dealt with quickly.\n\nLethal to humans in close quarters. Vulnerable to fire. Killable by slit throat, spear, or arrow — they are not heavily armored.",
+        "Origin & Lore": "Found in river floodplains near rice fields along the Eventide River in the Dimlands. Normally encountered in small numbers; the unusually large infestation in DK Ch. 2 may have been a sign of growing Storm activity.",
+        "Notable Encounters": "- **DK Ch. 2:** Fior's first banehunting expedition, guided by Kolb. A werehare attacks Fior; the lesson becomes a brutal introduction to the realities of bane hunting.",
+        "Notable Quotes": "> *\"If they blindside you with a punch they can get you in a hold and choke you to death without a sound. Lithe devils, they are. And the red unfeeling eyes will make a man's blood run cold.\"* — Kolb (DK, Ch. 2)",
+        "Researcher's Notes": "> I have interviewed a Dimlands farmer who lost two uncles to werehares in the same season. He described finding them face-down in the mud with no marks — just their eyes wide open. I do not think he sleeps well.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Bane variant. Silent ambush predator.",
+      "threatRating": "Moderate — deadly in packs."
+    },
+    {
+      "catalogId": "TOA/BST/006",
+      "title": "Two-Headed Wolf-Bane",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": false,
+      "physicalDescription": "A quadrupedal creature, likely a wolf before corruption, twisted into a two-headed form. The left head bears a long snout, sharp teeth, folded-back ears — a recognizable wolf-like visage. The right head is less defined: teeth protrude as vertical spikes attached directly to the face, and smoke leaks from oblong eyes. Darkness spills from wounds instead of blood.",
+      "sections": {
+        "Behavior & Combat Notes": "The two heads operate semi-independently, allowing the creature to track two targets simultaneously. This renders flanking maneuvers less effective — the creature cannot be easily distracted. Requires a coordinated simultaneous strike on both heads to kill cleanly.",
+        "Origin & Lore": "First documented during the Prologue Darktide — one of the earlier forms of corrupted animal that the Storm produces. The dual-head mutation is characteristic of the One Beyond's tendency to \"improve\" creatures beyond their natural forms.",
+        "Notable Encounters": "- **DK Prologue:** Brand and Dunalt coordinate an attack on both heads simultaneously, demonstrating the precise timing required to defeat such a creature.",
+        "Researcher's Notes": "> The two-headed wolf-bane is a reminder that bane are not merely corrupted animals — they are redesigned. The One Beyond does not simply twist; he rebuilds. The question of why one head retains its wolf-like form while the other is made monstrous is one of those details I suspect has an answer, though not one we are likely to enjoy learning.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Corrupted animal. Bane variant.",
+      "threatRating": "Moderate — dual-targeting threat."
+    },
+    {
+      "catalogId": "TOA/BST/007",
+      "title": "Four-Armed Ape-Bane",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": false,
+      "physicalDescription": "A massive creature standing double the height of a tall man. Two mighty legs support a torso from which four muscular arms sprout — two on each side. The head is roughly the size of Ciallmhar's ceremonial bell. The face bears X-shaped cutouts where eyes should be. Fur is wet, shadow-wisps curling from the body. It beats its chest and roars with the force of a battle-horn.",
+      "sections": {
+        "Behavior & Combat Notes:****Origin & Lore": "First documented during the Prologue Darktide. Brand noticed black threads running from the ape-bane back to a cloaked figure on the wall — the first evidence that Blackstone cultists directly control the largest bane. This implies that the most dangerous bane are not autonomous but puppeted.",
+        "Notable Encounters": "- **DK Prologue:** Holt severs one leg with a single horizontal slash. The creature drags itself on its fists. Brand and the defenders coordinate to bring it down through teamwork and fire essence.",
+        "Researcher's Notes": "> Holt the Oroan severed this creature's leg with a single earthstone-enhanced blow. I have seen Holt heal a man whose chest had been opened by an Outrider's blade. I have not seen him fight. I am told it is different. If this encounter is representative, the earthstone healers may be our most effective counter to large bane.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General)",
+        "TOA/BST/020 — Darkstone (the cultist's controlling mechanism)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Large bane. Heavy assault variant.",
+      "threatRating": "High — requires coordinated team engagement."
+    },
+    {
+      "catalogId": "TOA/BST/008",
+      "title": "Hellcat / Brimstone",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled",
+        "Hunting Misfortune"
+      ],
+      "restricted": false,
+      "physicalDescription": "Large cat-like creatures covered in black coin-sized overlapping plates, like obsidian. Eyes glow like lit coals. A flaming ridge runs along the back, capable of flaring up or dimming for stealth. The tail glows and moves with an independent intelligence. When the creature is excited or threatened, the plates ripple and stand on end. When calm, they lie flat.",
+      "sections": {
+        "Behavior & Combat Notes": "Intelligent and loyal to bonded handlers. They can track scents — particularly bane scent — with remarkable precision. They possess a unique immunity: they can consume bane corpses without being corrupted, as their internal fire purifies the consumption. The underbelly smolders with a soft glow during this process.\n\nHellcats are playful with those they trust and fiercely protective of their bonded partners. They purr with a low thrumming sound. They have a favorite spot under the chin that provokes an involuntary leg-kick.\n\nCombat abilities include pouncing, biting, and burning with flame. Immunity to the darkness-corruption that affects normal creatures.",
+        "Origin & Lore": "Hellcats were born before The Storm first raged across the world. They are described as a perfect balance of light and dark in their natural state. This balance makes them resistant to corruption and uniquely suited to serve as companions to those who fight bane.\n\nThe bonding process occurs when a human touches a hellcat with fire essence from a bonded stone, channeling it into the creature's blood. The link is then sealed when their magic crosses during combat. Rowan's bond with Brimstone formed accidentally during a rescue — he resisted it initially.\n\nThe Blackstones have long been fascinated with hellcats, as they represent a harmony of light and dark that the cult cannot replicate.\n\n**Critical Note (HM):** Darkweaves can damage the balance within a hellcat, causing potentially fatal consequences. Misfortune's darkweave nearly killed Brim in the Void. Priv explains: *\"The Blackstones have always been fascinated with hellcats. They were born before The Storm first raged across the world and are a perfect balance of light and dark. I believe I damaged that balance in her with my darkweave.\"* (HM, Ch. 38)",
+        "Notable Encounters": "- **DK Ch. 5:** Brimstone (Brim) introduced. Nihal attacked by essence-draining cultists; Brim is present.\n- **DK Ch. 15:** Brim collides with a Vermillion mid-air to save Fior.\n- **DK Ch. 16:** Rowan's deep emotional connection to Brim is revealed; she found his father's dream of nobility important.\n- **DK Ch. 24:** Brim gnaws on a depowered Outrider's blade like a bone.\n- **HM Ch. 1-45:** Brim's bond with Rowan is formalized. She tracks through the Voidrealm, nearly dies from darkweave damage, and is resurrected by Rowan sacrificing his own inner light to reignite her fires. The golden thread of their bond becomes visible — solid and real.\n- **HM Ch. 44:** Brim chooses to leave Rowan's body and help Misfortune — Rowan's spirit voice tells her *\"Go. Help him.\"*\n- **DK Ch. 37:** Brim and Rowan are knighted together. Brim is officially recognized as a Houndwarden.",
+        "Researcher's Notes": "> I have had the privilege of meeting Brimstone in the Tower's courtyard. She is... warm. That is not a word I ever expected to use describing a creature from the Darkland. She sat on my feet for ten minutes and purred. Whatever the bonding mechanism is, it produces a devotion that borders on the miraculous. If we could understand how hellcats resist corruption, we might understand how to resist it ourselves.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General) (dietary staple of bonded hellcats)",
+        "TOA/BST/005 — Werehare (hellcats are effective trackers against such bane)",
+        "TOA/BST/009 — Vermillion (a confirmed kill by Rowan, Roth, and Brim)",
+        "TOA/BST/022 — Essence-Draining Weapons (darkweave damage to balance)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK",
+        "HM"
+      ],
+      "classification": "Neutral creature. Native to Darkland. Not a bane.",
+      "threatRating": "Variable — domesticated specimens are loyal companions; wild specimens are dangerous predators."
+    },
+    {
+      "catalogId": "TOA/BST/009",
+      "title": "Vermillion",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": false,
+      "physicalDescription": "A large four-legged monster with bright red fur and black stripes running along the legs. A long tail ending in a tongue of flame. White horns crown its head. Its gaze is cold, calculating — that of a predator evaluating prey.",
+      "sections": {
+        "Behavior & Combat Notes": "A solitary hunter that stalks its prey before lunging for the kill. Engages directly rather than relying on stealth or ambush. Killed by coordinated effort — Rowan, Roth, and Brim worked together to dispatch it. Brim collided with it mid-air to save Fior, who was the primary target.",
+        "Origin & Lore": "Encountered during the Darkland expedition (DK Ch. 15). The red fur and flame tail distinguish it from standard dark-hued bane, suggesting either a different corruption process or a unique original species. The Vermillion may represent a bane variant that retains some of its original creature's coloration — or the corruption process produces unpredictable chromatic effects.",
+        "Notable Encounters": "- **DK Ch. 15:** Stalks and attacks Fior in Darkland. Dispatched quickly by Rowan, Roth, and Brim.",
+        "Researcher's Notes": "> The Vermillion is notable primarily for what it is not: a standard bane. The red coloration is anomalous. Most bane are black, grey, or shadow-toned. Red suggests fire essence may have been involved in its corruption — or that the creature's original form was so strongly associated with fire that the darkness could not fully suppress it. Speculative, but worth noting.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General)",
+        "TOA/BST/008 — Hellcat / Brimstone (survived its attack)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Bane variant. Solitary predator.",
+      "threatRating": "Moderate — dangerous to the unprepared."
+    },
+    {
+      "catalogId": "TOA/BST/010",
+      "title": "Gloom Hound",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": false,
+      "physicalDescription": "All-black wolf-like creatures with empty sockets where eyes should be. A lump where one ear should be. Their most unsettling trait: they move by sliding sideways without using their legs — as though the darkness itself carries them.",
+      "sections": {
+        "Behavior & Combat Notes": "Not immediately hostile. Gloom hounds follow victims in the Voidrealm, often without the victim's knowledge. They seem to function as observers, parasites, or trackers — not hunters. They accompanied Blackstone guards in the Voidrealm tunnels. A \"pack\" was encountered by Fior near the Woods of Wisdom.\n\nThe behavior pattern suggests they are reconnaissance tools — eyes for the One Beyond or his servants.",
+        "Origin & Lore": "Referred to in DK Ch. 1 as *\"wolves that had turned to bane.\"* Their sliding motion and eyeless forms suggest they are not simply corrupted wolves but have been transformed into something that operates on different physical rules — likely optimized for the Voidrealm's unnatural physics.",
+        "Notable Encounters": "- **DK Ch. 26:** A gloom hound accompanies a Blackstone guard in the Voidrealm tunnels, following Fior's party.\n- **DK Ch. 1 (ref.):** Their existence is known to Ciallmhar even before direct encounters.",
+        "Researcher's Notes": "> I do not like the gloom hound. Most bane announce themselves — through sound, through aggression, through presence. The gloom hound simply watches. It may be that they are no more intelligent than a tracking dog, but the feeling of being observed by something without eyes is uniquely disturbing.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General)",
+        "TOA/BST/019 — Deathwinds / Voidwinds (Voidrealm phenomena they co-occur with)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Corrupted animal. Bane variant.",
+      "threatRating": "Low — behavior suggests observation over aggression."
+    },
+    {
+      "catalogId": "TOA/BST/011",
+      "title": "Scale Worm (Shovel-Headed)",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled",
+        "Hunting Misfortune"
+      ],
+      "restricted": false,
+      "physicalDescription": "A small, shovel-headed creature with a rust-colored body and black eye-pits. Scales grind together as a warning sound. Young specimens can fit in a pocket. Coils and writhes when agitated.",
+      "sections": {
+        "Behavior & Combat Notes": "Not aggressive toward humans. Used in illegal racing at venues like Pillar's Pint (Nihal owned a racer named \"Scoop\"). The grinding scale sound is a warning display, not an attack.",
+        "Origin & Lore": "Natural denizens of Arsatir's underground. HM Ch. 7 reveals critical additional lore: miners use natural scaleworms to locate earthstone deposits. The worms make their nests beside earthstones. Constant contact with earth essence makes their skin exceptionally tough — resistant even to fire. Molting takes only a few minutes when near an earthstone.\n\nThe distinction between natural scaleworms and corrupted scaleworms is critical — see TOA/BST/014.",
+        "Notable Encounters": "- **DK Ch. 4:** Scaleworm races at Pillar's Pint, a common gambling sport among banehunters.",
+        "Researcher's Notes": "> That the miners use scaleworms to find earthstone deposits explains much. The creatures are tougher than they look, and their sensitivity to earth essence makes them ideal living divining rods. That the corrupted variant (TOA/BST/014) began as one of these harmless worms is a reminder that the One Beyond corrupts everything — even the most mundane life.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/012 — Baneling Rat (another commonly corrupted natural creature)",
+        "TOA/BST/014 — Larval Bane Creeper / Corrupted Scaleworm (corrupted variant)",
+        "TOA/BST/020 — Darkstone (remnants found in corrupted scaleworm corpse)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK",
+        "HM"
+      ],
+      "classification": "Natural creature. Not a bane.",
+      "threatRating": "None (adult); Low (corrupted variant — see TOA/BST/014)."
+    },
+    {
+      "catalogId": "TOA/BST/012",
+      "title": "Baneling Rat",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled",
+        "Hunting Misfortune"
+      ],
+      "restricted": false,
+      "physicalDescription": "A rat of ordinary size, corrupted by darkness. No distinctive physical traits beyond a subtle shadowy quality — they are often indistinguishable from normal rats in poor light.",
+      "sections": {
+        "Behavior & Combat Notes": "The most common and least dangerous form of bane. However, any wound from a baneling rat carries the risk of corruption. A friend of Rowan's was bitten as a boy; the corruption reached his blood and caused heat and seizures for hours. Feverfern was required to cure him once the corruption entered the bloodstream — firestone burns alone were insufficient.",
+        "Origin & Lore": "Baneling rats form when ordinary rats encounter concentrated darkness, either in the Voidrealm or in areas saturated by bane activity. They are the lowest rung of the bane hierarchy — the baseline from which all other corrupted creatures descend.",
+        "Notable Encounters": "- **DK Ch. 1 (ref.):** Fior's first bane kill at age thirteen was a baneling rat.\n- **DK Ch. 19:** Fior sees one during Darktide patrol — a reminder of how far he has come.",
+        "Researcher's Notes": "> Every banehunter I have interviewed began with a baneling rat. It is the entry level, the rite of passage. The corruption spreads from the smallest things. If we could understand why a rat becomes a baneling rat while other creatures become two-headed wolf-bane, we might understand the One Beyond's selection criteria. Or there may be no criteria at all, and he simply corrupts whatever is nearest.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General)",
+        "TOA/BST/021 — Essence Contamination (corruption progression)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK",
+        "HM"
+      ],
+      "classification": "Minor bane. Corrupted rodent.",
+      "threatRating": "Very Low — but capable of spreading corruption."
+    },
+    {
+      "catalogId": "TOA/BST/013",
+      "title": "Lesser-bane Creeper",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled",
+        "Hunting Misfortune"
+      ],
+      "restricted": false,
+      "physicalDescription": "Bane of the creeper family, characterized by chitinous plating rather than scales. A hundred legs, each as sharp as a blade. Nymph forms possess at least a dozen legs. The chitin is tough but not as durable as the scales of corrupted scaleworms.",
+      "sections": {
+        "Behavior & Combat Notes": "Standard bane variant. Fast-moving, aggressive. The hundred legs allow rapid traversal across uneven terrain. They can climb walls and ceilings. The blade-sharp legs make close-quarters combat dangerous — getting surrounded by creepers is often fatal.\n\nRowan killed three lesser-bane creepers before earning his facial scar — a testament to their danger even to experienced banehunters.",
+        "Origin & Lore": "First documented in HM (cross-referenced with DK where the creeper name appears in passing). The distinction between chitin and scales is important taxonomically — it separates creeper-types from the scaleworm lineage.",
+        "Notable Encounters": "- **HM Ch. 1 (ref.):** Rowan's scar from creeper combat.\n- **HM Ch. 4 (ref.):** Referenced as a known bane type in banehunter circles.",
+        "Researcher's Notes": "> The creeper's chitin is a key identifier. Rowan Stoutfire was quite insistent on this point when I interviewed him: *\"Creeper banes have scales in Ciallmhar? Not that I've seen. They have chitin. Tough chitin, but nothing compared to those scales.\"* (HM, Ch. 6) The distinction is not merely academic — it dictates what weapons are effective.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/001 — Bane (General)",
+        "TOA/BST/014 — Larval Bane Creeper / Corrupted Scaleworm (confused with this entry)",
+        "TOA/BST/011 — Scale Worm (natural creature, distinct from creeper)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK",
+        "HM"
+      ],
+      "classification": "Bane. Creeper family.",
+      "threatRating": "Moderate — fast, numerous, and dangerous in swarms."
+    },
+    {
+      "catalogId": "TOA/BST/014",
+      "title": "Larval Bane Creeper / Corrupted Scaleworm",
+      "type": "creature",
+      "spoilers": [
+        "Hunting Misfortune"
+      ],
+      "restricted": false,
+      "physicalDescription": "A massive legless scaly worm. Flat shovel-shaped head with a ring of teeth inside the mouth — no mandibles, distinguishing it from true creepers. A glossy sheen covers dark scales that grind together as a warning. Grows to enormous size through corruption.",
+      "sections": {
+        "Mutations from Corruption": "- Develops a horn that fires shadow beams\n- Grows a barbed tail\n- Becomes stronger the more damage it takes — *\"The mutations caused by the corruption are extremely unique. It only gets stronger the more damage it takes.\"* — Priv (HM, Ch. 6)\n- Molts rapidly by drawing on earthstone essence",
+        "Behavior & Combat Notes": "Kills for food — it devoured the Eventide Mine's workers. Molts in secure locations (chose the foreman's office on first molt). Vulnerable during molting. Can tunnel through rock. Spears bounce off its scales. Fire barely damages it at this stage of corruption. Only an earthstone dagger can penetrate its hide.",
+        "Origin & Lore": "Began as a natural scaleworm (see TOA/BST/011) that became corrupted by darkness. Miners typically use natural scaleworms (dog-sized) to locate earthstone deposits. The corruption triggered rapid, abnormal growth — from pocket-sized to mine-haunting horror.\n\nThe bounty for this creature was originally posted as \"Larval Bane Creeper\" — an incorrect classification. Priv correctly identified it as a corrupted scaleworm, noting the scale structure (not chitin) and the shovel-shaped head (not mandibles).",
+        "Weaknesses": "- The Pillar of Light — direct exposure causes complete dissolution within one minute\n- Earthstone dagger — the only conventional blade that penetrates",
+        "Death": "Destroyed in HM Ch. 9 after being baited to the Pillar of Light's edge. Exploded from a collapsed tunnel onto the illuminated side of the mountain. Within a minute, the creature broke down: *\"Flakes of skin blew off it as the entire creature broke down.\"* Left behind two darkstones — one melon-sized, one vambrace-sized.",
+        "Notable Encounters": "- **HM Ch. 2-9:** Central antagonist of the Eventide Mine arc. Rowan hunts it with Priv. Leads to the discovery of the Pillar of Light's bane-killing properties.",
+        "Researcher's Notes": "> The misclassification of this creature as a \"Larval Bane Creeper\" points to a larger problem with how the Banewardens classify bane. We rely on morphology, but the One Beyond's corruption produces forms that defy simple categorization. Priv's identification skills were essential to understanding what we were actually facing in the Eventide Mine. The pillar-of-light weakness is now Category 1 strategic information.\n\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/011 — Scale Worm (natural origin of this creature)",
+        "TOA/BST/013 — Lesser-bane Creeper (the misidentification)",
+        "TOA/BST/020 — Darkstone (recovered from the corpse)"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "HM"
+      ],
+      "classification": "Corrupted natural creature. Misidentified as creeper variant.",
+      "threatRating": "High — regenerates, mutates, and grows stronger with damage."
+    },
+    {
+      "catalogId": "TOA/BST/015",
+      "title": "Coldhart",
+      "type": "creature",
+      "spoilers": [
+        "Darkness Kindled"
+      ],
+      "restricted": false,
+      "physicalDescription": "Deer-like creatures with cloven hooves and black spiraled antlers (smaller on young bucks). White pelts, majestic and clean in appearance. Some specimens have tiny tusks. Their movements are eerily quiet despite their size.",
+      "sections": {
+        "Behavior & Combat Notes": "Natural animals — not bane, not corrupted. Can be skittish and bolt when startled. They are found both in Ciallmhar's Dimlands and in the forested edges of Darkland, which is significant: Darkland can sustain non-corrupted life, at least in its marginal zones.",
+        "Origin & Lore": "Coldhart are cousins to the Firehart. If the Firehart represents wisdom, the Coldhart represents mystery. Their white pelts and silent movements have inspired numerous folktales in Ciallmhar. Their ability to survive in Darkland territory without being corrupted makes them a subject of ongoing study among the Banewardens.",
+        "Notable Encounters": "- **DK Ch. 2:** Coldhart spotted in the Dimlands near werehare territory.\n- **DK Ch. 15:** Coldhart observed in the forested edges of Darkland during the expedition, confirming that Darkland sustains untainted life.",
+        "Researcher's Notes": "> The Coldhart's presence in Darkland is one of our most promising lines of inquiry. Rowan Stoutfire reported seeing a small herd grazing within bowshot of the mountain fortress where bane are herded. If natural life can persist that close to the Storm's domain, there must be something about the Coldhart that resists corruption — or about Darkland that is not entirely the One Beyond's territory. The relationship between Coldhart and Firehart may hold the key.\n> — Archivist M. Wren"
+      },
+      "crossReferences": [
+        "TOA/BST/016 — Firehart / Os (cousin species)",
+        "TOA/BST/001 — Bane (General) (distinction from corrupted creatures)",
+        "TOA/APP/001 — Stoneskins (their reverence for natural creatures)#"
+      ],
+      "fieldNotes": [],
+      "sourceBook": [
+        "DK"
+      ],
+      "classification": "Natural animal. Not a bane.",
+      "threatRating": "None — skittish and non-aggressive."
+    },
+    {
+      "catalogId": "TOA/BST/016",
+      "title": "Firehart (Os & His Children)",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Mythical Beast / Spirit of Light",
+      "threatRating": "MINIMAL — Reverence required│"
+    },
+    {
+      "catalogId": "TOA/BST/017",
+      "title": "Dragon Tree",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {
+        "Known Visions (Fior, DK Ch. 15)": "- The Northern Wall exploding, sending stone and fire across the landscape\n- A crowned man whose light-heart went dark — herald of a king's corruption\n- A scholar figure sending a child away, a bundle of lights in the scholar's hands\n- A stag collapsing to its knees and a pillar falling — the fall of innocence and order\n\n### Banehunter Legend\n[Rowan Stoutfire, recorded testimony, DK Ch. 15]\n\n*\"Dragons used to tell a tale to their prey, luring them into a trance before eating them. When the last dragon died, its essence distilled into the seed that would become the first Dragon Tree. So they live on to bind us with spells and since they can't consume us physically, they consume our minds with twisted tales of the future.\"*\n\nThis explanation is unverifiable. The Tower considers it folkloric.\n\n### Marginalia\n*A. The Dragon Tree's visions demonstrably came true in part — the Wall did explode (DK Prologue, retroactively understood), and a crowned man did go dark (the Fathan crisis). Whether these are prophecy, probability-reading, or self-fulfilling suggestion remains debated.*\n\n*B. Dragon Tree seeds have not been successfully cultivated within Tower grounds. Attempts to transplant saplings resulted in immediate withering. The tree appears to require Darkland conditions to thrive.*\n\n### Cross-References\n- TOA/BST/016 — Firehart: Comparative vision-source\n- TOA/BST/015 — Darkland (general): Primary habitat\n- TOA/BST/018 — The One Beyond: Some Tower theorists suspect the Dragon Trees are indirectly connected to the One Beyond's mind, capturing and echoing its sight across the boundary. Unsubstantiated."
+      },
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Magical Flora / Vision-Bearing Plant",
+      "threatRating": "LOW — Mental hazard only    │"
+    },
+    {
+      "catalogId": "TOA/BST/018",
+      "title": "The One Beyond",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": true,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "[CLASSIFICATION PENDING] — Deity / Storm Intelligence / Soul-Sifter",
+      "threatRating": "EXTREME — COSMIC THREAT    │"
+    },
+    {
+      "catalogId": "TOA/BST/019",
+      "title": "Deathwinds / Voidwinds",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Void Phenomenon / Manifested Will",
+      "threatRating": "EXTREME — Avoid at all costs│"
+    },
+    {
+      "catalogId": "TOA/BST/020",
+      "title": "Darkstone (Corrupted Essence Stone)",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Corrupted Artifact / Dark Magic Focus",
+      "threatRating": "HIGH — Enabler of darkness  │"
+    },
+    {
+      "catalogId": "TOA/BST/021",
+      "title": "Essence Contamination (Disease)",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Magical Disease / Essence-Burn Condition",
+      "threatRating": "MODERATE — Permanent damage │"
+    },
+    {
+      "catalogId": "TOA/BST/022",
+      "title": "Essence-Draining Weapons",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Dark Artifact / Weapon",
+      "threatRating": "HIGH — Lethal methodology   │"
+    },
+    {
+      "catalogId": "TOA/BST/023",
+      "title": "The Horde (Void Hordelings)",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Void Creature / Swarm Entity"
+    },
+    {
+      "catalogId": "TOA/BST/024",
+      "title": "Defiling Mother",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Void Creature / Reproductive Entity"
+    },
+    {
+      "catalogId": "TOA/BST/025",
+      "title": "Void Dragon",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Void Creature / Apex Predator"
+    },
+    {
+      "catalogId": "TOA/BST/026",
+      "title": "Razorjaw / Charrut",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Natural Beast / Sacred Prey"
+    },
+    {
+      "catalogId": "TOA/BST/027",
+      "title": "Bane Goat (Corrupted Goat)",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Corrupted Natural Animal / Minor Bane"
+    },
+    {
+      "catalogId": "TOA/BST/028",
+      "title": "Void Outrider (Bond-Breaker Hunter)",
+      "type": "creature",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Void Entity / Bound Servant of the One Beyond"
+    },
+    {
+      "catalogId": "TOA/APP/001",
+      "title": "Stoneskins",
+      "type": "appendix",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Human Culture / Nomadic People"
+    },
+    {
+      "catalogId": "TOA/APP/002",
+      "title": "The Umbra Six",
+      "type": "appendix",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "[CLASSIFICATION PENDING] — Artificially Created Humanoids / Weavers"
+    },
+    {
+      "catalogId": "TOA/APP/003",
+      "title": "The Ancient / Touwyl (Void Keeper)",
+      "type": "appendix",
+      "spoilers": [],
+      "restricted": false,
+      "physicalDescription": "",
+      "sections": {},
+      "crossReferences": [],
+      "fieldNotes": [],
+      "sourceBook": [],
+      "classification": "Mythic Being / Former Void Keeper"
+    }
+  ]
+}

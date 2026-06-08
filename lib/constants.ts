@@ -10,6 +10,7 @@ export const LINKS = {
   home: "/",
   books: "/books",
   worldOfEadrom: "/world-of-eadrom",
+  bestiary: "/bestiary",
   about: "/about",
   whyFantasy: "/why-fantasy",
   support: "/support",
