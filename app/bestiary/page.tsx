@@ -1,17 +1,13 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import Link from "next/link"
-import compendiumData from "@/data/compendium-parsed.json"
-
-const entries = (compendiumData as any).entries as CompendiumEntry[]
 
 interface CompendiumEntry {
   catalogId: string
   title: string
   type: string
   spoilers: string[]
-  restricted: boolean
   physicalDescription?: string
   sections?: Record<string, string>
   threatRating?: string
@@ -37,10 +33,19 @@ function truncateText(text: string, max: number): string {
 }
 
 export default function PublicBestiaryPage() {
+  const [entries, setEntries] = useState<CompendiumEntry[]>([])
+  const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState("")
   const [categoryFilter, setCategoryFilter] = useState("all")
   const [bookFilter, setBookFilter] = useState("all")
   const [selectedEntry, setSelectedEntry] = useState<CompendiumEntry | null>(null)
+
+  useEffect(() => {
+    fetch("/api/bestia/public")
+      .then((r) => r.json())
+      .then((d) => { setEntries(d.entries || []); setLoading(false) })
+      .catch(() => setLoading(false))
+  }, [])
 
   const filtered = useMemo(() => {
     return entries.filter((e) => {
@@ -66,6 +71,27 @@ export default function PublicBestiaryPage() {
 
   const creatures = filtered.filter((e) => e.type === "creature")
   const appendices = filtered.filter((e) => e.type === "appendix")
+
+  if (loading) {
+    return (
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 pt-16 pb-16">
+        <div className="text-center py-20">
+          <p className="text-sm text-parchment-500 font-mono">Loading the archive...</p>
+        </div>
+      </section>
+    )
+  }
+
+  if (entries.length === 0) {
+    return (
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 pt-16 pb-16">
+        <div className="text-center py-20">
+          <p className="text-sm text-parchment-500 font-mono">No published entries available yet.</p>
+          <p className="mt-2 text-xs text-parchment-600 font-mono">The bestiary is being compiled. Check back soon.</p>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section className="mx-auto max-w-5xl px-4 sm:px-6 pt-16 pb-16">
@@ -93,7 +119,7 @@ export default function PublicBestiaryPage() {
 
       {/* Stats bar */}
       <div className="rounded border border-ember-dim/40 bg-parchment-900/50 p-4 mb-8">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs font-mono">
+        <div className="grid grid-cols-3 gap-3 text-center text-xs font-mono">
           <div>
             <p className="text-ember-200 font-display text-lg">{entries.filter(e => e.type === "creature").length}</p>
             <p className="text-parchment-500 uppercase tracking-wider">Creatures</p>
@@ -103,12 +129,8 @@ export default function PublicBestiaryPage() {
             <p className="text-parchment-500 uppercase tracking-wider">Appendices</p>
           </div>
           <div>
-            <p className="text-ember-200 font-display text-lg">{entries.filter(e => e.restricted).length}</p>
-            <p className="text-parchment-500 uppercase tracking-wider">Restricted</p>
-          </div>
-          <div>
-            <p className="text-ember-200 font-display text-lg">31</p>
-            <p className="text-parchment-500 uppercase tracking-wider">Total Entries</p>
+            <p className="text-ember-200 font-display text-lg">{entries.length}</p>
+            <p className="text-parchment-500 uppercase tracking-wider">Public Entries</p>
           </div>
         </div>
       </div>
@@ -167,7 +189,6 @@ export default function PublicBestiaryPage() {
           </h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {creatures.map((entry) => {
-              const locked = entry.restricted
               const preview = entry.physicalDescription
                 ? truncateText(entry.physicalDescription, 120)
                 : ""
@@ -175,19 +196,12 @@ export default function PublicBestiaryPage() {
               return (
                 <div
                   key={entry.catalogId}
-                  className={`group relative rounded border ${
-                    locked
-                      ? "border-ember-dim/20 bg-parchment-900/30 opacity-70"
-                      : "border-ember-dim/40 bg-parchment-900/60 hover:border-ember-600/50 cursor-pointer"
-                  } transition-all p-4`}
-                  onClick={() => !locked && setSelectedEntry(entry)}
+                  className="group rounded border border-ember-dim/40 bg-parchment-900/60 hover:border-ember-600/50 cursor-pointer transition-all p-4"
+                  onClick={() => setSelectedEntry(entry)}
                 >
                   {/* ID + badges */}
                   <div className="flex items-center gap-2 mb-1.5">
                     <span className="font-mono text-[10px] text-ember-600">{entry.catalogId}</span>
-                    {locked && (
-                      <span className="text-[10px]">🔒</span>
-                    )}
                     {entry.spoilers && entry.spoilers.length > 0 && entry.spoilers.some(Boolean) && (
                       <span className="text-[9px] font-mono text-parchment-600">
                         [{entry.spoilers.filter(Boolean).join(", ")}]
@@ -201,15 +215,9 @@ export default function PublicBestiaryPage() {
                   </h3>
 
                   {/* Preview text */}
-                  {preview && !locked && (
+                  {preview && (
                     <p className="mt-2 text-[11px] text-parchment-500 leading-relaxed">
                       {preview}
-                    </p>
-                  )}
-
-                  {locked && (
-                    <p className="mt-2 text-[11px] text-parchment-600 italic">
-                      🔒 Restricted — sign in to unlock
                     </p>
                   )}
 
