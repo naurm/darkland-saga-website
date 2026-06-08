@@ -174,7 +174,7 @@ export default function HomePage() {
         <div className="border-t border-ember-dim pt-12">
           <svg
             className="mx-auto mb-6 h-12 w-8 text-ember-400"
-            viewBox="0 0 24 40"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="1.3"
@@ -182,11 +182,10 @@ export default function HomePage() {
             strokeLinejoin="round"
             aria-hidden="true"
           >
-            {/* Open flame — teardrop body with flicker tips */}
-            <path d="M12 2c0 0-6 8-6 14 0 3.3 2.7 6 6 6s6-2.7 6-6c0-6-6-14-6-14z"/>
-            <path d="M10 16c0 0 .5 2 2 2s2-2 2-2" opacity="0.5"/>
-            <path d="M12 22c0 0-2 .5-2 2 0 1 1 2 2 2s2-1 2-2c0-1.5-2-2-2-2z"/>
-            <path d="M11 3l-1 2M13 3l1 2" opacity="0.3"/>
+            {/* Flame in dark circle */}
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 5c0 0-3 4-3 7 0 1.7 1.3 3 3 3s3-1.3 3-3c0-3-3-7-3-7z" opacity="0.85"/>
+            <path d="M11 14c0 0 .2 1 1 1s1-1 1-1" opacity="0.5"/>
           </svg>
           <RotatingQuote quotes={homepageQuotes} intervalMs={30000} />
           <p className="mt-6 font-mono text-[11px] text-parchment-600">
