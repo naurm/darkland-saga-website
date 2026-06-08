@@ -20,6 +20,14 @@ async function main() {
   let count = 0
 
   for (const entry of entries) {
+    const existing = await prisma.bestiaEntry.findUnique({
+      where: { catalogId: entry.catalogId },
+      select: { publicExcerpt: true },
+    })
+
+    // Preserve admin-set publicExcerpt — don't overwrite with JSON default
+    const publicExcerpt = entry.publicExcerpt || existing?.publicExcerpt || null
+
     const data = {
       title: entry.title,
       type: entry.type || "creature",
@@ -27,7 +35,7 @@ async function main() {
       aliases: entry.aliases || null,
       threatRating: entry.threatRating || null,
       physicalDescription: entry.physicalDescription || "",
-      publicExcerpt: entry.publicExcerpt || null,
+      publicExcerpt,
       sections: entry.sections || {},
       spoilers: entry.spoilers || [],
       restricted: entry.restricted || false,
