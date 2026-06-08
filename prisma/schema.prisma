@@ -120,3 +120,30 @@ model ContentTag {
 
   @@unique([contentId, tag])
 }
+
+/// Bestia Darkanda — Bane Compendium entries (Tower of Archives, Level 7)
+model BestiaEntry {
+  id          String   @id @default(cuid())
+  catalogId   String   @unique           // e.g. "TOA/BST/001"
+  title       String
+  type        String   @default("creature")   // "creature" | "appendix"
+
+  classification String?
+  aliases        String?
+  threatRating   String?
+
+  physicalDescription String @default("")
+
+  /// Sub-sections like Behavior, Origin & Lore, Notable Encounters, etc.
+  sections    Json     @default("{}")
+
+  spoilers    String[] @default([])      // book names
+  restricted  Boolean  @default(false)
+  sourceBooks String[] @default([])      // "DK" | "HM"
+  crossReferences String[] @default([])  // catalog IDs
+  fieldNotes  String[] @default([])      // italic quote blocks
+
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

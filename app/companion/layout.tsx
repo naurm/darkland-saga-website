@@ -27,6 +27,11 @@ export default function CompanionLayout({
               Companion Archive
             </span>
           </div>
+          <div className="flex items-center gap-3">
+            <a href="/companion/bestia" className="font-mono text-[10px] uppercase tracking-[0.15em] text-parchment-500 hover:text-ember-400 transition-colors">
+              Bestia
+            </a>
+          </div>
         </div>
       </div>
 
