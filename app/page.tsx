@@ -173,19 +173,30 @@ export default function HomePage() {
       <section className="mx-auto max-w-3xl px-6 py-20 text-center">
         <div className="border-t border-ember-dim pt-12">
           <svg
-            className="mx-auto mb-6 h-12 w-8 text-ember-400"
-            viewBox="0 0 24 24"
+            className="mx-auto mb-6 h-12 w-10 text-ember-400"
+            viewBox="0 0 28 28"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.3"
+            strokeWidth="1.2"
             strokeLinecap="round"
             strokeLinejoin="round"
             aria-hidden="true"
           >
-            {/* Flame in dark circle */}
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 5c0 0-3 4-3 7 0 1.7 1.3 3 3 3s3-1.3 3-3c0-3-3-7-3-7z" opacity="0.85"/>
-            <path d="M11 14c0 0 .2 1 1 1s1-1 1-1" opacity="0.5"/>
+            {/* Faceted crystal heart with jagged flame crown */}
+            {/* Flame tips — upper crown */}
+            <path d="M14 1l-2 3 2 1 2-3-2-1z" opacity="0.7"/>
+            <path d="M8 3l-1 4 2 1 1-4-2-1z" opacity="0.6"/>
+            <path d="M20 3l1 4-2 1-1-4 2-1z" opacity="0.6"/>
+            <path d="M4 9l2 3-1 2-3-2 2-3z" opacity="0.5"/>
+            <path d="M24 9l-2 3 1 2 3-2-2-3z" opacity="0.5"/>
+            {/* Outer flame ring */}
+            <path d="M5 12l-2 3 3 2 1-3-2-2z" opacity="0.4"/>
+            <path d="M23 12l2 3-3 2-1-3 2-2z" opacity="0.4"/>
+            {/* Faceted crystal center */}
+            <path d="M14 8l5 5-5 8-5-8 5-5z"/>
+            <path d="M14 8l-5 5h10l-5-5z"/>
+            <path d="M9 13l5 8V8L9 13z" opacity="0.6"/>
+            <path d="M19 13l-5 8V8l5 5z" opacity="0.3"/>
           </svg>
           <RotatingQuote quotes={homepageQuotes} intervalMs={30000} />
           <p className="mt-6 font-mono text-[11px] text-parchment-600">
