@@ -42,6 +42,12 @@ export default function AdminPage() {
             {t === "codes" ? "Generate Codes" : t === "content" ? "Add Content" : t === "bestia" ? "Bestia" : "Users"}
           </button>
         ))}
+        <a
+          href="/admin/comments"
+          className="px-4 py-2 text-sm font-mono rounded border border-ember-dim text-parchment-500 hover:text-parchment-300 hover:border-ember-600/50 transition-all"
+        >
+          Comments
+        </a>
       </div>
 
       {tab === "codes" ? <CodeGenerator /> : tab === "content" ? <ContentEditor /> : tab === "bestia" ? <BestiaEditor /> : <UserManager />}

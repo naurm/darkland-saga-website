@@ -13,6 +13,7 @@ export const LINKS = {
   bestiary: "/bestiary",
   about: "/about",
   whyFantasy: "/why-fantasy",
+  blog: "/blog",
   support: "/support",
   royalRoad: "https://www.royalroad.com/fiction/159610/darkness-kindled",
   bridgeOfTwo: "https://bridgeoftwo.com",

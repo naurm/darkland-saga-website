@@ -150,3 +150,49 @@ model BestiaEntry {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+/// Blog posts — stored in DB so they can have comments and likes
+model BlogPost {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  excerpt   String?
+  content   String   /// Full HTML/markdown body
+  category  String   @default("on-writing")
+  pinned    Boolean  @default(false)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  comments  BlogComment[]
+  likes     BlogLike[]
+}
+
+/// Comments on blog posts
+model BlogComment {
+  id        String   @id @default(cuid())
+  postSlug  String
+  author    String   /// Display name
+  email     String?  /// Optional, for moderation contact
+  body      String
+  approved  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  post      BlogPost @relation(fields: [postSlug], references: [slug], onDelete: Cascade)
+
+  @@index([postSlug])
+  @@index([approved])
+}
+
+/// Likes on blog posts
+model BlogLike {
+  id        String   @id @default(cuid())
+  postSlug  String
+  ipHash    String   /// Anonymized IP for dedup
+  createdAt DateTime @default(now())
+
+  post      BlogPost @relation(fields: [postSlug], references: [slug], onDelete: Cascade)
+
+  @@unique([postSlug, ipHash])
+  @@index([postSlug])
+}
