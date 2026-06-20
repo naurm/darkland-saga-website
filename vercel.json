@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx prisma generate && npx prisma db push && npx next build",
+  "buildCommand": "npx prisma generate && npx prisma db push --accept-data-loss && node scripts/seed.js && node scripts/seed-bestia.js && next build",
   "installCommand": "pnpm install",
   "framework": "nextjs",
   "outputDirectory": ".next"
