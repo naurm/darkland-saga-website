@@ -1,5 +1,21 @@
 font-size:clamp(0.85rem,1vw,0.95rem);line-height:1.6;color:var(--tm);margin-bottom:2rem}
 
+/* === EMBERLIGHT BACKGROUND — Golden arc on dark === */
+html, body {
+    background-image: url('/images/emberlight-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        background-attachment: scroll;
+        background-size: auto 100%;
+    }
+}
+
 /* C5: THE WORLD cards */
 .c5g{display:grid;grid-template-columns:1fr;gap:2rem}
 @media(min-width:40em){.c5g{grid-template-columns:1fr 1fr;gap:2.5rem}}
