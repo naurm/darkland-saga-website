@@ -409,6 +409,6 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background: #0f0d08 url('/images/emberlight-bg.png') 0% 0% / cover scroll no-repeat;
+        background: #0f0d08 url('/images/emberlight-bg-mobile.png') center center / cover scroll no-repeat;
     }
 }
